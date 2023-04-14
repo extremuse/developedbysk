@@ -158,7 +158,7 @@
                 @include breakpoint-up(large){
                     font-size: 0.98rem;
                 }
-                @include breakpoint-up(small){
+                @include breakpoint-down(small){
                     font-size: 2rem;
                 }
                 // @include breakpoint-down(medium){
