@@ -279,7 +279,7 @@
    // background-color: azure;
    display: none;
     .bars{
-        border-radius: 25%;
+        border-radius: 5%;
         background-color: $globalColorSecond;
         height: 2px;
         width: inherit;
@@ -331,7 +331,7 @@
     }
     @include breakpoint-down(small){
         @include flex(center,center,column);
-        height: 65rem;
+        height: 70rem;
     }
     .content-left{
         flex: 1.3;

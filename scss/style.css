@@ -332,7 +332,7 @@ a, :visited, :hover {
   display: none;
 }
 .hamburger .bars {
-  border-radius: 25%;
+  border-radius: 5%;
   background-color: #00f4ff;
   height: 2px;
   width: inherit;
@@ -394,7 +394,7 @@ a, :visited, :hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 65rem;
+    height: 70rem;
   }
 }
 .home-content-image .content-left {
