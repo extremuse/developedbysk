@@ -1,0 +1,664 @@
+#home{
+    width: 100vw;
+    height: 100vh;
+    .home-inner{
+        max-width: 1980px;
+        height: inherit;
+        margin: auto;
+    }
+
+}
+.navbar{
+    max-width: 1580px;
+    margin: auto;
+    height: 9.375rem;
+    padding: 0px 20px ;
+    //background: rgb(249, 249, 249);
+    z-index: 999;
+    @include flex(center,center,row);
+    @include breakpoint-down(small){
+        height:4.2rem;
+        margin-bottom: 1rem;
+    }
+    .logo{
+        //background-color: aquamarine;
+        width: 10%;
+        flex: 1 1;
+        position: relative;
+        top: 8px;
+        @include breakpoint-down(tablet){
+            width: 5%;
+        }
+        // @include breakpoint-down(medium){
+        //     flex: 1.2;
+        // }
+        &::after{
+            content: "";
+            background-color: $globalColor;
+            width: 2px;
+            height: 3.7rem;
+            position: absolute;
+            top: 0px;
+            left: 7.3rem;
+            transform: rotate(27deg);
+            animation-name: logo_slash;
+            animation-duration:2s;
+            overflow: hidden;
+
+        }
+        a{
+            color:$fontGrey;
+        .logo-sachin{
+            //color: black;
+            font-size: 2rem;
+            line-height:0.8;
+            width: 7.3rem;
+            //background-color: blueviolet;
+            animation-name: logo_sachin;
+            animation-duration:2s;
+            position: relative;
+            right: 0;
+            overflow: hidden;
+            @include breakpoint-down(xlarge){
+                line-height: 1;
+            }
+
+            @keyframes logo_slash {
+                0%{
+                left:0rem;
+                opacity: 0;
+                height: 0;        
+                }
+                25%{
+                    height: 3.7rem;
+                    opacity: 25%;
+                    // left: ;
+                }
+                50%{
+                    opacity: 90%;
+                }
+                
+                100%{
+                    left: 7.3rem;
+                    opacity: 100%;
+                }
+            }
+            @keyframes logo_sachin {
+                0%{
+                opacity: 0;right: -7.3rem;
+                // margin-left: -7.3rem;
+                }
+                25%{
+                    opacity: 0%;
+                }
+                50%{
+                    opacity:0%;
+                }
+                
+                100%{
+                    opacity: 100%;
+                    right: 0;
+                    
+                }
+                
+            }
+        }
+        .logo-kumar{
+            font-weight:800;
+            font-size: 2.1rem;
+            margin-left: 7.3rem;
+            //background-color: aqua;
+            line-height: 0.8;
+            animation-name: logo_kumar;
+            animation-duration:3s;
+            position: relative;
+            right: 0;
+            overflow: hidden;
+        }
+        @keyframes logo_kumar {
+            0%{
+            opacity: 0;left: -7.3rem;
+            // margin-left: -7.3rem;
+            }
+            35%{
+                opacity: 0%;
+            }
+            70%{
+                opacity:0%;
+            }
+            
+            100%{
+                opacity: 100%;
+                left: 0;
+                
+            }
+        }
+    }
+    }
+    .menu{
+        flex: 2 1;
+        //background-color: azure;
+        @include flex(space-evenly,center,row);
+        .menu-items{
+                background-image: linear-gradient(to bottom ,transparent 0%, transparent 90% , $globalColor 90% ,$globalColor 100%);
+                background-size: 0% 100%;
+                background-position-x: right;
+                background-repeat: no-repeat;
+                transition: background-size 500ms;
+                height: 1.4rem;
+                border-radius: 18px;
+                &:hover{
+                    background-size: 100% 100%;
+                    background-position-x:left ;
+                }  
+            a{color: $fontGrey;
+                font-weight: 300;
+                font-family: Arial, Helvetica, sans-serif;
+                //font-family: 'PT Mono', monospace;
+                @include breakpoint-up(large){
+                    font-size: 0.98rem;
+                }
+                // @include breakpoint-down(medium){
+                //     font-size: 0.8rem;
+                // }
+                // @include breakpoint-down(small){
+                //     font-size: 1rem;
+                // }
+                &:hover{
+                    color:$globalColor;
+                }
+                &:hover .span-num{
+                    color: $fontGrey;
+                   
+
+                }
+                .span-num{
+                    color: $globalColor;
+                }
+            }
+        }
+        @include breakpoint-down(tablet){
+            //display: block;
+            position: absolute;
+            @include flex(center,center,column);
+            width:100vw;
+            clip-path: circle(0% at 95.3% 8.5% );
+            height: 80vh;
+            background: rgba(0, 0, 0, 0.3);
+            top:2.5rem;
+            border-radius: 20px;
+            gap:2;
+            right: 0;
+            backdrop-filter:blur(10px);
+            transition: all 0.8s ease-in;
+            z-index:999;
+            .menu-items{
+                //background-color:aqua ;
+                z-index:999;
+                margin-bottom: 20px;
+                opacity: 0;
+                transition: all 0.79s ease-in;
+                a{
+                    pointer-events: none;
+                }
+            }
+        }
+        @include breakpoint-down(small){
+            width:100vw;
+            height:50vh;
+            top: 0;
+            z-index:999;
+            color: $white;
+        }
+    }
+    .mail-git-dark-box{
+        flex: 1 ;
+        //background-color: aquamarine;
+        @include flex(flex-end,center,row);
+        @include breakpoint-down(small){
+            display: none;
+        }
+        .email{
+            margin-right: 15px;
+            //background-color: red;
+            @include flex(flex-end,center,row);
+            i{
+                width: 100%;
+                color: $globalColor;
+                font-size: 1.4rem;
+                //background-color: aqua;
+                &:hover{
+                    transform: scale(1.2);
+                    color:$white;
+                }
+            }
+        }
+        .github{
+            margin-right: 15px;
+            border: 1.5px solid $globalColor;
+            padding: 10px 20px  ;
+            border-radius: 8px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 1.4rem;
+            @include flex(center,center,row);
+            .span-github{
+                font-size: 0.8rem;
+                padding-left: 10px;
+                
+            }
+            &:hover{
+                border-color: $black;
+                background-color: $globalColor;
+                color: $black;
+            }
+        }
+        .theme-mode{
+            margin-right: 15px;
+            color: $globalColor;
+            height:100%;
+            &:hover{
+                color:$white;
+                transform: scale(1.1);
+            }
+        }
+    }
+    
+}
+.menu-2{
+    clip-path: circle(100% ) !important;
+}
+.link-effect{
+    opacity: 100% !important;
+}
+//************hamburger**********
+
+.hamburger{
+    height: 1.5rem;
+    width: 32px;
+   // background-color: azure;
+   display: none;
+    .bars{
+        border-radius: 25%;
+        background-color: $globalColorSecond;
+        height: 2px;
+        width: inherit;
+        margin-bottom: 6px;
+        transition: all 0.5s ease;
+    }
+
+    @include breakpoint-down(tablet){
+        display: block;
+        z-index: 999;
+    }
+}
+.active {
+    &:nth-child(1){
+        transform: rotate(55deg) translateY(6px);
+        background-color: $globalColor;
+    }
+    &:nth-child(2){
+        opacity: 0;
+        background-color: $globalColor;
+    }
+    &:nth-child(3){
+        transform: rotate(-55deg) translateY(-6px);
+        background-color: $globalColor;
+    }
+}
+
+//****************end of navbar******************
+
+//*****************home-content*********************
+
+.home-content-image{
+    max-width: 1580px;
+    padding: 0px 20px;
+    margin: auto;
+    height: 84vh;
+    //background-color: aliceblue;
+    @include flex(center,center,row);
+    @include breakpoint-down(xlarge){
+        height: 74vh;
+    }
+    @include breakpoint-down(medium){
+        height: 64vh !important;    
+        // background-color: aliceblue;
+    }    
+    @include breakpoint-down(tablet){
+        @include flex(center,center,column);
+        height: 81vh !important;
+    }
+    @include breakpoint-down(small){
+        @include flex(center,center,column);
+    }
+    .content-left{
+        flex: 1.3;
+        height: inherit;
+        @include flex(center,flex-start,column);
+        //background-color: red;
+        position: relative;
+        @include breakpoint-down(xlarge){
+            flex: 1;
+        }
+        @include breakpoint-down(medium){
+            flex: 01;
+        }
+        @include breakpoint-down(tablet){
+            flex: 1;
+            height: 51rem;
+            @include flex(center,flex-start,column);
+            //background-color: aqua;
+        }
+    
+        &::before{
+            content: "01.";
+            font-family: 'PT Mono', monospace;
+            position: absolute;
+            bottom: 0;
+            color: $fontGrey;
+            font-size: 3rem;
+            @include breakpoint-down(tablet){
+            display: none;
+            }        
+        }
+        .introduce-name{
+            font-size: 2.2rem;
+            position: relative;
+            width: 100%;
+            font-family: 'Noto Serif KR', serif;
+            @include breakpoint-down(xlarge){
+                font-size: 2rem;
+            }
+            @include breakpoint-down(medium){
+                font-size: 1.5rem;
+            }
+            @include breakpoint-down(tablet){
+                font-size: 2rem;
+            }
+            // &::after{
+            //     content: "";
+            //     position: absolute;
+            //     height: 100%;
+            //     width: 100%;
+            //     left: 0;
+            //     border-left: 2px solid $fontGrey;
+            //     background-color: $backgroundColor;
+            //     animation: slide 4s steps(19);
+            // }
+            .span-sachinKumar{
+                font-size: 3.7rem;
+                color: $globalColor;
+                font-family: 'Noto Serif KR', serif;
+                font-weight: 500;
+                @include breakpoint-down(xlarge){
+                    font-size: 3.1rem;
+                }
+                @include breakpoint-down(medium){
+                    font-size: 2.4rem;
+                }
+                @include breakpoint-down(tablet){
+                    font-size: 3.5rem;
+                }
+
+            }
+            
+        }
+        .works-define{
+            font-size: 1.2rem;
+            //background-color: red;
+            @include breakpoint-down(tablet){
+                font-size: 1.5rem;
+            }
+            ul{
+                li{
+                    position: relative;
+                    list-style-type: none;
+                    //background-color: grey;
+
+            //      &::after{
+            //     content: "";
+            //     position: absolute;
+            //     height: 100%;
+            //     width: 100%;
+            //     left: 0;
+            //     border-left: 2px solid $fontGrey;
+            //     //background-color: $backgroundColor;
+            //     animation: slide 4.3s steps(10);
+            // }
+                }
+            }
+        }
+        .my-thought{
+                position: relative;
+              font-family: 'PT Mono', monospace;
+              //background-color: aqua;
+              //padding:0px 5px 0px 8px;
+              margin-top: 5px;
+              font-size: 1.2rem;
+              @include breakpoint-down(tablet){
+                margin-top: 0.3rem;
+                font-size: 1.4rem;
+            }
+
+        }
+        .contact{
+            height: 3rem;
+            width: 10rem;
+            color:$black;
+            background-color: $globalColor;
+            border: none;
+            font-weight: 700;
+            margin-top: 5px;
+            position: relative;
+            transition: all 0.4s ease-in-out;
+            clip-path: polygon(
+                2rem 0 ,
+                calc(100% + 2rem) 0,
+                calc(100% - 2rem) 100%,
+                -2rem 100%);
+                &:hover{
+                    background-color: transparent;
+                    border: 2px solid $globalColor;
+                    color: $fontGrey;
+                    font-weight: 400;
+                }
+                @include breakpoint-down(tablet){
+                    margin-top: 0.4rem
+                }
+                @include breakpoint-down(small){
+                    font-size: 1rem;
+                }
+        }
+    }
+    .image-right{
+        @include flex(center,center,row);
+        flex: 2;
+        width: 100%;
+        height: inherit;
+        @include breakpoint-down(medium){
+            flex: 2.1;
+        }
+        @include breakpoint-down(tablet){
+            height: 34rem;
+        }
+    }
+    .my-image-left{
+        flex:1;
+        height:100% ;
+        width: 100%;
+        position: relative;
+        @include breakpoint-down(xlarge){
+            flex: 0.98;
+        }
+        @include breakpoint-down(small){
+            flex: 2;
+        }
+        .triangle:nth-child(1){
+            width: inherit;
+            position: relative;
+            height: inherit;
+            left: 83px;
+            bottom: 0;
+            background-image: url(/assests/triangle.svg.png);
+            background-repeat: no-repeat;
+            background-size: 70% 90%;
+            background-position: 0% 100%;
+            img{
+                width: 100%;
+                
+            }
+            @include breakpoint-down(small){
+                left: 0px;
+                background-size:95% 90%;
+                background-position: 0% 100%;
+            }
+        }
+        .code-icons{
+            position: absolute;
+            width: 75px;
+         img{
+            width: 100%;
+         }
+
+        }
+        .code-icons:nth-child(2){
+            top: 20%;
+            left: 17%;
+            @include breakpoint-down(medium){
+                width: 70px;
+            }
+            @include breakpoint-down(tablet){
+                width: 70px;
+            }
+            @include breakpoint-down(small){
+                width: 50px;
+                left: 7%;
+            }
+        }
+        .code-icons:nth-child(3){
+            top: 17%;
+            width: 60px;
+            right: 30%;
+            @include breakpoint-down(medium){
+                width: 40px;
+                right: 24%;
+            }
+            @include breakpoint-down(tablet){
+                width: 51px;
+                right: 27%;
+            }
+            @include breakpoint-down(small){
+                width: 40px;
+                right: 15%;
+            }
+        }
+        .code-icons:nth-child(4){
+            bottom: 45%;
+            right: 33%;
+            width: 70px;
+            //background-color: red;
+            animation: circular 15s linear infinite ;
+            @include breakpoint-down(medium){
+                width: 50px;
+            }
+            @include breakpoint-down(tablet){
+                width: 65px;
+                bottom: 40%;
+                right: 30%;
+            }
+            @include breakpoint-down(small){
+                width: 50px;
+                right: 20%;
+            }
+        }
+
+        .code-icons:nth-child(5){
+            bottom: 13%;
+            left: 10%;
+            width: 55px;
+            @include breakpoint-down(medium){
+                width: 45px;
+                left: 7%;
+            }
+            @include breakpoint-down(medium){
+                width: 50px;
+                left: 7%;
+            }
+            @include breakpoint-down(small){
+                width: 35px;
+                left: -1%;
+                bottom: 10%;
+            }
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            background: url(/assests/sk.png);width: 93%;
+            height: 85%;
+            background-position: 50% 10%;
+            background-repeat: no-repeat;
+            background-size: 65% 100%;
+            bottom: 0;
+            @include breakpoint-down(xlarge){
+                background-size: 61% 100%;
+            }
+            @include breakpoint-down(medium){
+                background-size: 70% 100%;
+                bottom: 0;
+                background-position: 54% 100%;
+            }
+            @include breakpoint-down(tablet){
+                background-size: 60% 100%;
+                bottom: 0;
+                background-position: 54% 100%;
+            }
+            @include breakpoint-down(small){
+                background-size: 85% 100%;
+                bottom: 0;
+                background-position: 54% 100%;
+            }
+        }
+
+    }
+    .social-icons-right{
+        flex: 0;
+        //background-color: yellow;
+        position: relative;
+        height: inherit;
+        @include flex(flex-end,center,column);
+        padding-bottom: 20px;
+        @include breakpoint-down(small){
+            flex: 0;
+        }
+        .social_icons{
+            margin-bottom: 5px;
+            &>a{
+                font-size: 1.7rem;
+                color: $white;
+            }
+        }
+        &::before{
+            position: absolute;
+            bottom: 10rem;
+            content: "";
+            background-color: $globalColor;
+            width: 4px;
+            height: 45%;
+        }
+    }
+}
+@keyframes slide{
+    100%{
+        left: 100%;
+        margin: 0px -35px 0px 35px;
+    }
+}
+@keyframes circular{
+    0%{
+        transform: rotate(-360deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

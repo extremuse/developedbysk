@@ -1,0 +1,24 @@
+    @mixin flex($justify-content,$align,$direction){
+        display: flex;
+        justify-content: $justify-content;
+        align-items: $align;
+        flex-direction:$direction ;
+    }
+
+
+    //Responsive breakpoints
+    
+$breakpoints-up:("medium":"40rem", "large":"64rem" , "larger":"87.5rem" );
+
+$breakpoints-down: ("small": "39.9375rem","tablet":"56.25rem", "medium": "64rem", "large": "87.4375rem","xlarge":"97.5rem");
+
+@mixin breakpoint-up($size){
+        @media(min-width: map-get($breakpoints-up,$size)){
+            @content;
+        }
+}
+@mixin breakpoint-down($size){
+    @media(max-width: map-get($breakpoints-down,$size)){
+        @content;
+    }
+}
