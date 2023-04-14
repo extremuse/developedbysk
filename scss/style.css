@@ -363,7 +363,7 @@ a, :visited, :hover {
   max-width: 1580px;
   padding: 0px 20px;
   margin: auto;
-  height: 84vh;
+  height: 58.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -371,12 +371,12 @@ a, :visited, :hover {
 }
 @media (max-width: 97.5rem) {
   .home-content-image {
-    height: 74vh;
+    height: 57rem;
   }
 }
 @media (max-width: 64rem) {
   .home-content-image {
-    height: 64vh !important;
+    height: 52rem;
   }
 }
 @media (max-width: 56.25rem) {
@@ -385,7 +385,7 @@ a, :visited, :hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 81vh !important;
+    height: 43rem;
   }
 }
 @media (max-width: 39.9375rem) {
@@ -394,6 +394,7 @@ a, :visited, :hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 65rem;
   }
 }
 .home-content-image .content-left {

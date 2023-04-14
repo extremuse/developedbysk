@@ -315,22 +315,23 @@
     max-width: 1580px;
     padding: 0px 20px;
     margin: auto;
-    height: 84vh;
+    height: 58.5rem;
     //background-color: aliceblue;
     @include flex(center,center,row);
     @include breakpoint-down(xlarge){
-        height: 74vh;
+        height: 57rem;
     }
     @include breakpoint-down(medium){
-        height: 64vh !important;    
+        height: 52rem;    
         // background-color: aliceblue;
     }    
     @include breakpoint-down(tablet){
         @include flex(center,center,column);
-        height: 81vh !important;
+        height: 43rem;
     }
     @include breakpoint-down(small){
         @include flex(center,center,column);
+        height: 65rem;
     }
     .content-left{
         flex: 1.3;
