@@ -205,7 +205,7 @@
         }
         @include breakpoint-down(small){
             width:100vw;
-            height:50vh;
+            height:100vh;
             top: 0;
             z-index:999;
             color: $white;
@@ -331,7 +331,7 @@
     }
     @include breakpoint-down(small){
         @include flex(center,center,column);
-        height: 70rem;
+        height: 80rem;
     }
     .content-left{
         flex: 1.3;
