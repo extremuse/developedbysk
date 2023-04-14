@@ -208,6 +208,11 @@ a, :visited, :hover {
     font-size: 0.98rem;
   }
 }
+@media (min-width: ) {
+  .navbar .menu .menu-items a {
+    font-size: 1rem;
+  }
+}
 .navbar .menu .menu-items a:hover {
   color: #04d7df;
 }
@@ -424,6 +429,7 @@ a, :visited, :hover {
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    margin-top: 5rem;
   }
 }
 .home-content-image .content-left::before {
