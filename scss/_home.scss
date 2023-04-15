@@ -158,12 +158,11 @@
                 @include breakpoint-up(large){
                     font-size: 0.98rem;
                 }
-
                 // @include breakpoint-down(medium){
                 //     font-size: 0.8rem;
                 // }
                 // @include breakpoint-down(small){
-                //     font-size: 1rem;
+                //     font-size: 2rem;
                 // }
                 &:hover{
                     color:$globalColor;
