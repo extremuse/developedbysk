@@ -1,0 +1,86 @@
+#about-me{
+    width: 100vw;
+    height: 100vh;
+    .about-me-inner{
+        max-width: 1580px;
+        height: inherit;
+        margin: auto;
+        //background-color: black;
+        padding-top: 60px;
+        @include flex(center,flex-start,row);
+        .about-me-content-left{
+            @include flex(center,flex-start,column);
+            //background-color: rgb(204, 144, 65);
+            flex: 1;
+            .creative-top{
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: $white;
+                line-height: 1;
+                .creative-design{
+                    font-size: 3.7rem;
+                    font-weight: 600;
+                    color: $globalColor;
+                }
+            }
+            .creative-center{
+                font-size: 1.8rem;
+                font-weight: 600;
+                line-height: 1;
+            }
+            .creative-bottom{
+                font-size: 1.5rem;
+                line-height: 1;
+                font-weight: 700;
+                color: $white;
+                @include flex(flex-start,center,row);
+                .creative-design-second{
+                    font-size: 2.2rem;
+                    font-weight: 300;
+                    @include flex(center,center,row);
+                    font-weight: 600;
+                    color: $globalColor;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+            }
+        }
+        .about-me-content-right{
+            flex: 1;
+            @include flex(center,flex-end,column);
+            height: inherit;
+            .about:nth-child(1){
+                width: 300px;
+                height: 200px;
+                position: relative;
+                &::before{
+                    content:"";
+                    background: url(/assests/about-elipse-style.png);
+                    position: absolute;
+                    width: inherit;
+                    height: inherit;
+                    top: 0px;
+                    left: -4rem;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                }
+            }
+            .about:nth-child(2){
+                width: 300px;
+                height: 200px;
+                position: relative;
+                background-color: aquamarine;
+                &::before{
+                    content:"";
+                    background: url(/assests/about-elipse-style.png);
+                    position: absolute;
+                    width: inherit;
+                    height: inherit;
+                    // left: -4rem;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    top: 100px;
+                }
+            }
+        }
+    }
+}
