@@ -747,7 +747,7 @@ a, :visited, :hover {
 }
 @media (max-width: 39.9375rem) {
   .home-content-image .my-image-left::after {
-    background-size: 85% 80%;
+    background-size: 85% 85%;
     bottom: 0;
     background-position: 54% 100%;
   }
