@@ -333,7 +333,7 @@
     }
     @include breakpoint-down(small){
         @include flex(center,center,column);
-        height: 92vh;
+        height: 90vh;
     }
     .content-left{
         flex: 1.3;
@@ -547,7 +547,7 @@
                 width: 70px;
             }
             @include breakpoint-down(small){
-                width: 50px;
+                width: 54px;
                 left: 4%;
                 top: 40%;
             }
@@ -566,7 +566,7 @@
                 top: 25%;
             }
             @include breakpoint-down(small){
-                width: 30px;
+                width: 34px;
                 right: 14%;
                 top: 43%;
             }
@@ -586,7 +586,7 @@
                 right: 30%;
             }
             @include breakpoint-down(small){
-                width: 35px;
+                width: 38px;
                 right: 20%;
                 bottom: 27%;
             }
@@ -605,7 +605,7 @@
                 left: 7%;
             }
             @include breakpoint-down(small){
-                width: 28px;
+                width: 30px;
                 left: -3%;
                 bottom: 6%;
             }
@@ -650,6 +650,8 @@
         padding-bottom: 20px;
         @include breakpoint-down(small){
             flex: 0;
+            padding-bottom: -5px ;
+            bottom: -40px;
         }
         .social_icons{
             margin-bottom: 5px;
@@ -665,6 +667,10 @@
             background-color: $globalColor;
             width: 4px;
             height: 45%;
+            @include breakpoint-down(small){
+                width: 2px;
+                height: 48%;
+            }
         }
     }
 }

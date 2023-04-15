@@ -25,7 +25,7 @@ html {
 }
 @media (max-width: 39.9375rem) {
   html {
-    font-size: 70%;
+    font-size: 78%;
   }
 }
 
@@ -395,7 +395,7 @@ a, :visited, :hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 92vh;
+    height: 90vh;
   }
 }
 .home-content-image .content-left {
@@ -630,7 +630,7 @@ a, :visited, :hover {
 }
 @media (max-width: 39.9375rem) {
   .home-content-image .my-image-left .code-icons:nth-child(2) {
-    width: 50px;
+    width: 54px;
     left: 4%;
     top: 40%;
   }
@@ -655,7 +655,7 @@ a, :visited, :hover {
 }
 @media (max-width: 39.9375rem) {
   .home-content-image .my-image-left .code-icons:nth-child(3) {
-    width: 30px;
+    width: 34px;
     right: 14%;
     top: 43%;
   }
@@ -680,7 +680,7 @@ a, :visited, :hover {
 }
 @media (max-width: 39.9375rem) {
   .home-content-image .my-image-left .code-icons:nth-child(4) {
-    width: 35px;
+    width: 38px;
     right: 20%;
     bottom: 27%;
   }
@@ -704,7 +704,7 @@ a, :visited, :hover {
 }
 @media (max-width: 39.9375rem) {
   .home-content-image .my-image-left .code-icons:nth-child(5) {
-    width: 28px;
+    width: 30px;
     left: -3%;
     bottom: 6%;
   }
@@ -760,6 +760,8 @@ a, :visited, :hover {
 @media (max-width: 39.9375rem) {
   .home-content-image .social-icons-right {
     flex: 0;
+    padding-bottom: -5px;
+    bottom: -40px;
   }
 }
 .home-content-image .social-icons-right .social_icons {
@@ -776,6 +778,12 @@ a, :visited, :hover {
   background-color: #00f4ff;
   width: 4px;
   height: 45%;
+}
+@media (max-width: 39.9375rem) {
+  .home-content-image .social-icons-right::before {
+    width: 2px;
+    height: 48%;
+  }
 }
 
 @keyframes slide {
