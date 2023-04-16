@@ -857,6 +857,11 @@ a, :visited, :hover {
     flex-direction: column;
   }
 }
+@media (max-width: 39.9375rem) {
+  #about-me .about-me-inner {
+    height: 75rem;
+  }
+}
 #about-me .about-me-inner .about-me-content-left {
   display: flex;
   justify-content: flex-start;

@@ -8,7 +8,10 @@
         @include flex(center,flex-start,row);
         @include breakpoint-down(tablet){
             @include flex(flex-start,center,column);
-            }      
+            } 
+        @include breakpoint-down(small){
+            height: 75rem
+        }     
         //background-color: black;
         .about-me-content-left{
             @include flex(flex-start,flex-start,column);
