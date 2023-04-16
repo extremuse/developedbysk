@@ -161,7 +161,7 @@
                     }
                 }
                 @include breakpoint-down(xlarge){
-                    padding-right: 20%;
+                    padding-right: 0%;
                 }
                 @include breakpoint-down(tablet){
                     padding-right: 0%;
@@ -242,7 +242,7 @@
                     }
                 }
                 @include breakpoint-down(xlarge){
-                    padding-right: 20%;
+                    padding-right: 0%;
                 }
                 @include breakpoint-down(tablet){
                     padding-right: 0%;
