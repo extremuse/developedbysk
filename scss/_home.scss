@@ -345,7 +345,7 @@
     }
     @include breakpoint-down(small){
         @include flex(center,center,column);
-        height: 55rem;
+        height: 70rem;
     }
     .content-left{
         flex: 1.3;
@@ -362,7 +362,10 @@
             flex: 1;
             @include flex(center,flex-start,column);
         }
-    
+        @include breakpoint-down(small){
+           
+        }
+        
         &::before{
             content: "01.";
             font-family: 'PT Mono', monospace;
