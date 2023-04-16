@@ -52,9 +52,14 @@ a, :visited, :hover {
   width: 100vw;
   height: 100vh;
 }
+@media (max-width: 39.9375rem) {
+  #home {
+    margin-bottom: 6500px;
+  }
+}
 #home .home-inner {
   max-width: 1980px;
-  height: inherit;
+  height: 68rem;
   margin: auto;
 }
 
@@ -257,6 +262,12 @@ a, :visited, :hover {
     color: #ffffff;
     font-size: 1.5rem;
   }
+  .navbar .menu .menu-items {
+    height: 2rem;
+  }
+  .navbar .menu .span-num {
+    display: none;
+  }
 }
 .navbar .mail-git-dark-box {
   flex: 1;
@@ -286,7 +297,10 @@ a, :visited, :hover {
   transform: scale(1.2);
   color: #ffffff;
 }
-.navbar .mail-git-dark-box .github {
+.navbar .mail-git-dark-box a {
+  color: #00f4ff;
+}
+.navbar .mail-git-dark-box a .github {
   margin-right: 15px;
   border: 1.5px solid #00f4ff;
   padding: 10px 20px;
@@ -299,11 +313,11 @@ a, :visited, :hover {
   align-items: center;
   flex-direction: row;
 }
-.navbar .mail-git-dark-box .github .span-github {
+.navbar .mail-git-dark-box a .github .span-github {
   font-size: 0.8rem;
   padding-left: 10px;
 }
-.navbar .mail-git-dark-box .github:hover {
+.navbar .mail-git-dark-box a .github:hover {
   border-color: #000000;
   background-color: #00f4ff;
   color: #000000;
@@ -375,11 +389,6 @@ a, :visited, :hover {
     height: 57rem;
   }
 }
-@media (max-width: 64rem) {
-  .home-content-image {
-    height: 52rem;
-  }
-}
 @media (max-width: 56.25rem) {
   .home-content-image {
     display: flex;
@@ -395,7 +404,7 @@ a, :visited, :hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 85vh;
+    height: 80vh;
   }
 }
 .home-content-image .content-left {
@@ -722,7 +731,7 @@ a, :visited, :hover {
   height: 85%;
   background-position: 50% 10%;
   background-repeat: no-repeat;
-  background-size: 67% 100%;
+  background-size: 67% 98%;
   bottom: 0;
 }
 @media (max-width: 97.5rem) {
@@ -747,7 +756,7 @@ a, :visited, :hover {
 }
 @media (max-width: 39.9375rem) {
   .home-content-image .my-image-left::after {
-    background-size: 85% 85%;
+    background-size: 77% 100%;
     bottom: 0;
     background-position: 54% 100%;
   }
@@ -770,11 +779,18 @@ a, :visited, :hover {
   }
 }
 .home-content-image .social-icons-right .social_icons {
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 .home-content-image .social-icons-right .social_icons > a {
   font-size: 1.7rem;
   color: #ffffff;
+  transition: all 0.5s ease-in-out;
+}
+.home-content-image .social-icons-right .social_icons > a:hover {
+  color: #00f4ff;
+}
+.home-content-image .social-icons-right .social_icons > a:hover i {
+  transform: scale(1.1);
 }
 .home-content-image .social-icons-right::before {
   position: absolute;
@@ -811,20 +827,55 @@ a, :visited, :hover {
 }
 #about-me .about-me-inner {
   max-width: 1580px;
-  height: inherit;
+  height: 65rem;
   margin: auto;
-  padding-top: 60px;
+  padding: 0px 20px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: row;
 }
+@media (max-width: 56.25rem) {
+  #about-me .about-me-inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 #about-me .about-me-inner .about-me-content-left {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   flex: 1;
+  position: relative;
+  height: 65rem;
+}
+#about-me .about-me-inner .about-me-content-left::before {
+  content: "02.";
+  font-family: "PT Mono", monospace;
+  position: absolute;
+  bottom: 0;
+  color: #d9d9d9;
+  font-size: 3rem;
+}
+@media (max-width: 56.25rem) {
+  #about-me .about-me-inner .about-me-content-left::before {
+    display: none;
+  }
+}
+@media (max-width: 56.25rem) {
+  #about-me .about-me-inner .about-me-content-left {
+    flex: 1;
+    margin: auto;
+    align-items: center;
+  }
+}
+@media (max-width: 39.9375rem) {
+  #about-me .about-me-inner .about-me-content-left {
+    flex: 9;
+  }
 }
 #about-me .about-me-inner .about-me-content-left .creative-top {
   font-size: 2.5rem;
@@ -832,10 +883,20 @@ a, :visited, :hover {
   color: #ffffff;
   line-height: 1;
 }
+@media (max-width: 39.9375rem) {
+  #about-me .about-me-inner .about-me-content-left .creative-top {
+    font-size: 2rem;
+  }
+}
 #about-me .about-me-inner .about-me-content-left .creative-top .creative-design {
   font-size: 3.7rem;
   font-weight: 600;
   color: #00f4ff;
+}
+@media (max-width: 39.9375rem) {
+  #about-me .about-me-inner .about-me-content-left .creative-top .creative-design {
+    font-size: 2.3rem;
+  }
 }
 #about-me .about-me-inner .about-me-content-left .creative-center {
   font-size: 1.8rem;
@@ -852,6 +913,11 @@ a, :visited, :hover {
   align-items: center;
   flex-direction: row;
 }
+@media (max-width: 39.9375rem) {
+  #about-me .about-me-inner .about-me-content-left .creative-bottom {
+    font-size: 1.3rem;
+  }
+}
 #about-me .about-me-inner .about-me-content-left .creative-bottom .creative-design-second {
   font-size: 2.2rem;
   font-weight: 300;
@@ -863,43 +929,201 @@ a, :visited, :hover {
   color: #00f4ff;
   font-family: Arial, Helvetica, sans-serif;
 }
+@media (max-width: 39.9375rem) {
+  #about-me .about-me-inner .about-me-content-left .creative-bottom .creative-design-second {
+    font-size: 1.4rem;
+  }
+}
+#about-me .about-me-inner .about-me-content-left .hello {
+  width: inherit;
+  height: 600px;
+  margin: auto;
+  background-repeat: no-repeat;
+  margin-top: 10%;
+  filter: brightness(0.89);
+  position: relative;
+}
+@media (max-width: 64rem) {
+  #about-me .about-me-inner .about-me-content-left .hello {
+    width: inherit;
+    height: 400px;
+  }
+}
+@media (max-width: 56.25rem) {
+  #about-me .about-me-inner .about-me-content-left .hello {
+    margin-top: 0%;
+    top: -4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+#about-me .about-me-inner .about-me-content-left .hello img {
+  width: 60%;
+  background-position: center;
+}
+@media (max-width: 39.9375rem) {
+  #about-me .about-me-inner .about-me-content-left .hello {
+    top: 0%;
+    height: 250px;
+  }
+  #about-me .about-me-inner .about-me-content-left .hello img {
+    width: 70%;
+  }
+}
 #about-me .about-me-inner .about-me-content-right {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-end;
   flex-direction: column;
+  padding: 14% 10% 0% 10%;
   height: inherit;
+  position: relative;
+}
+@media (max-width: 56.25rem) {
+  #about-me .about-me-inner .about-me-content-right {
+    gap: 50px;
+  }
+}
+@media (max-width: 39.9375rem) {
+  #about-me .about-me-inner .about-me-content-right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    flex: 1;
+    gap: 50px;
+  }
 }
 #about-me .about-me-inner .about-me-content-right .about:nth-child(1) {
-  width: 300px;
-  height: 200px;
+  flex: 1;
+  height: 100px;
+  font-size: 1.2rem;
   position: relative;
+  line-height: 1;
+  text-align: justify;
+  text-indent: -1px;
+  top: 10px;
+  padding-right: 60%;
+  margin-bottom: 0%;
 }
 #about-me .about-me-inner .about-me-content-right .about:nth-child(1)::before {
   content: "";
   background: url(/assests/about-elipse-style.png);
   position: absolute;
-  width: inherit;
-  height: inherit;
-  top: 0px;
+  width: 200px;
+  height: 90px;
+  top: -100px;
   left: -4rem;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 90%;
+}
+@media (max-width: 39.9375rem) {
+  #about-me .about-me-inner .about-me-content-right .about:nth-child(1)::before {
+    height: 70px;
+    top: -70px;
+  }
+}
+@media (max-width: 39.9375rem) {
+  #about-me .about-me-inner .about-me-content-right .about:nth-child(1) {
+    padding-right: 0%;
+    height: inherit;
+  }
 }
 #about-me .about-me-inner .about-me-content-right .about:nth-child(2) {
-  width: 300px;
-  height: 200px;
+  flex: 1;
+  height: 100px;
+  font-size: 1.2rem;
   position: relative;
-  background-color: aquamarine;
+  line-height: 1;
+  text-align: justify;
+  text-indent: -1px;
+  padding-left: 50%;
 }
-#about-me .about-me-inner .about-me-content-right .about:nth-child(2)::before {
+#about-me .about-me-inner .about-me-content-right .about:nth-child(2)::after {
   content: "";
   background: url(/assests/about-elipse-style.png);
   position: absolute;
-  width: inherit;
-  height: inherit;
+  width: 300px;
+  height: 90px;
+  top: -100px;
+  transform: scaleX(-1);
+  right: -4rem;
   background-repeat: no-repeat;
-  background-size: 100%;
-  top: 100px;
+  background-size: 66% 82%;
+}
+@media (max-width: 39.9375rem) {
+  #about-me .about-me-inner .about-me-content-right .about:nth-child(2)::after {
+    height: 70px;
+    top: -65px;
+  }
+}
+@media (max-width: 39.9375rem) {
+  #about-me .about-me-inner .about-me-content-right .about:nth-child(2) {
+    padding-left: 0%;
+    height: inherit;
+  }
+}
+#about-me .about-me-inner .about-me-content-right .about:nth-child(3) {
+  flex: 1;
+  height: 100px;
+  font-size: 1.2rem;
+  position: relative;
+  line-height: 1;
+  text-align: justify;
+  text-indent: -1px;
+  padding-right: 50%;
+}
+#about-me .about-me-inner .about-me-content-right .about:nth-child(3)::after {
+  content: "";
+  background: url(/assests/about-elipse-style.png);
+  position: absolute;
+  width: 300px;
+  height: 90px;
+  top: -100px;
+  left: -4rem;
+  background-repeat: no-repeat;
+  background-size: 66% 82%;
+}
+@media (max-width: 39.9375rem) {
+  #about-me .about-me-inner .about-me-content-right .about:nth-child(3)::after {
+    height: 70px;
+    top: -60px;
+  }
+}
+@media (max-width: 39.9375rem) {
+  #about-me .about-me-inner .about-me-content-right .about:nth-child(3) {
+    padding-right: 0%;
+    height: inherit;
+  }
+}
+#about-me .about-me-inner .about-me-content-right .about-me-text {
+  font-size: 3.5rem;
+  letter-spacing: -2px;
+  position: relative;
+  bottom: 10px;
+  right: 0;
+  flex: 0.1;
+  word-spacing: 0px;
+  font-weight: 600;
+  color: #a5a5a5;
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 95%, #00f4ff 95%, #00f4ff 100%);
+  background-size: 15% 100%;
+  background-position-x: left;
+  background-repeat: no-repeat;
+  transition: background-size 500ms;
+}
+#about-me .about-me-inner .about-me-content-right .about-me-text:hover {
+  background-size: 100% 100%;
+}
+@media (max-width: 39.9375rem) {
+  #about-me .about-me-inner .about-me-content-right .about-me-text {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    font-size: 3rem;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -3,30 +3,60 @@
     height: 100vh;
     .about-me-inner{
         max-width: 1580px;
-        height: inherit;
+        height: 65rem;
         margin: auto;
-        //background-color: black;
-        padding-top: 60px;
+        padding: 0px 20px ;
         @include flex(center,flex-start,row);
+        @include breakpoint-down(tablet){
+            @include flex(flex-start,center,column);
+            }      
+        //background-color: black;
         .about-me-content-left{
-            @include flex(center,flex-start,column);
-            //background-color: rgb(204, 144, 65);
+            @include flex(flex-start,flex-start,column);
             flex: 1;
+            position: relative;
+            height:65rem;
+            &::before{
+                content: "02.";
+                font-family: 'PT Mono', monospace;
+                position: absolute;
+                bottom: 0;
+                color: $fontGrey;
+                font-size: 3rem;
+                @include breakpoint-down(tablet){
+                display: none;
+                }
+            }
+            @include breakpoint-down(tablet){
+                flex: 1;
+                margin: auto;
+                align-items: center;
+            }
+            @include breakpoint-down(small){
+                flex: 9;
+            }
             .creative-top{
                 font-size: 2.5rem;
                 font-weight: 700;
                 color: $white;
                 line-height: 1;
-                .creative-design{
-                    font-size: 3.7rem;
-                    font-weight: 600;
+                @include breakpoint-down(small){
+                    font-size: 2rem;
+                    }
+                    .creative-design{
+                        font-size: 3.7rem;
+                        font-weight: 600;
                     color: $globalColor;
+                    @include breakpoint-down(small){
+                        font-size: 2.3rem;
+                        }
                 }
             }
             .creative-center{
                 font-size: 1.8rem;
                 font-weight: 600;
                 line-height: 1;
+
             }
             .creative-bottom{
                 font-size: 1.5rem;
@@ -34,51 +64,187 @@
                 font-weight: 700;
                 color: $white;
                 @include flex(flex-start,center,row);
-                .creative-design-second{
-                    font-size: 2.2rem;
-                    font-weight: 300;
-                    @include flex(center,center,row);
-                    font-weight: 600;
-                    color: $globalColor;
-                    font-family: Arial, Helvetica, sans-serif;
+                @include breakpoint-down(small){
+                    font-size: 1.3rem;
+                    }
+                    .creative-design-second{
+                        font-size: 2.2rem;
+                        font-weight: 300;
+                        @include flex(center,center,row);
+                        font-weight: 600;
+                        color: $globalColor;
+                        font-family: Arial, Helvetica, sans-serif;
+                        @include breakpoint-down(small){
+                            font-size: 1.4rem;
+                            }
+                    }
+            }
+            .hello{
+                width:inherit;
+                height: 600px;
+                margin: auto;
+                background-repeat: no-repeat;
+                margin-top: 10%;
+                filter: brightness(0.89);
+                position: relative;
+                @include breakpoint-down(medium){
+                    width: inherit;
+                    height: 400px;
+                }
+                @include breakpoint-down(tablet){
+                    margin-top: 0%;
+                    top: -4%;
+                    @include flex(center,center,row)
+                }   
+                img{
+                    width: 60%;
+                    background-position:center ;
+                }
+                @include breakpoint-down(small){
+                    top: 0%;
+                    height: 250px;
+                    img{
+                        width: 70%;
+
+                    }
                 }
             }
         }
         .about-me-content-right{
             flex: 1;
-            @include flex(center,flex-end,column);
+            @include flex(flex-start,flex-end,column);
+            padding: 14% 10% 0% 10%;
             height: inherit;
+            position: relative;
+            @include breakpoint-down(tablet){
+                gap: 50px;
+                }
+            @include breakpoint-down(small){
+                    @include flex(center,flex-end,column);
+                    flex: 1;
+                    gap: 50px;
+                }
             .about:nth-child(1){
-                width: 300px;
-                height: 200px;
+                flex: 1;
+                height: 100px;
+                font-size: 1.2rem;
                 position: relative;
+                line-height: 1;
+                text-align: justify;
+                text-indent: -1px;
+                top: 10px; 
+                padding-right: 60%;
+                margin-bottom: 0%;
                 &::before{
                     content:"";
                     background: url(/assests/about-elipse-style.png);
                     position: absolute;
-                    width: inherit;
-                    height: inherit;
-                    top: 0px;
+                    width: 200px;
+                    height: 90px;
+                    top:-100px;
                     left: -4rem;
                     background-repeat: no-repeat;
-                    background-size: 100%;
+                    background-size: 100% 90%;
+                    @include breakpoint-down(small){
+                        height: 70px;
+                        top: -70px;
+                    }
+                }
+                @include breakpoint-down(small){
+                    padding-right:0%;
+                    height: inherit;
+                    
                 }
             }
             .about:nth-child(2){
-                width: 300px;
-                height: 200px;
+                flex: 1;
+                height: 100px;
+                font-size: 1.2rem;
                 position: relative;
-                background-color: aquamarine;
-                &::before{
+                line-height: 1;
+                text-align: justify;
+                text-indent: -1px;
+                padding-left:50% ;
+                &::after{
                     content:"";
                     background: url(/assests/about-elipse-style.png);
                     position: absolute;
-                    width: inherit;
-                    height: inherit;
-                    // left: -4rem;
+                    width: 300px;
+                    height: 90px;
+                    top: -100px;
+                    transform: scaleX(-1);
+                    right: -4rem;
                     background-repeat: no-repeat;
-                    background-size: 100%;
-                    top: 100px;
+                    background-size: 66% 82%;
+                    // @include breakpoint-down(medium){
+                        //     height: 50px;
+                    //     width: 240px;
+                    //     right: 10rem;
+                    // }
+                    
+                    @include breakpoint-down(small){
+                        height: 70px;
+                        top: -65px;
+                    }
+                }
+                @include breakpoint-down(small){
+                    padding-left:0%;
+                    height: inherit;
+                    
+                }
+            }
+            .about:nth-child(3){
+                flex: 1;
+                height: 100px;
+                font-size: 1.2rem;
+                position: relative;
+                line-height: 1;
+                text-align: justify;
+                text-indent: -1px;
+                padding-right:50% ;
+                &::after{
+                    content:"";
+                    background: url(/assests/about-elipse-style.png);
+                    position: absolute;
+                    width: 300px;
+                    height: 90px;
+                    top: -100px;
+                    left: -4rem;
+                    background-repeat: no-repeat;
+                    background-size: 66% 82%;
+                    @include breakpoint-down(small){
+                        height: 70px;
+                        top: -60px;
+                    }
+                }
+                @include breakpoint-down(small){
+                    padding-right:0%;
+                    height: inherit;
+                    
+                }
+            }
+            .about-me-text{
+                font-size: 3.5rem;
+                letter-spacing: -2px;
+                position: relative;
+                bottom: 10px;
+                right: 0;
+                flex: 0.1;
+                word-spacing: 0px;
+                //font-family: 'PT Mono', monospace;
+                font-weight: 600;
+                color: $fontGrey2;
+                background-image: linear-gradient(to bottom ,transparent 0%, transparent 95% , $globalColor 95% ,$globalColor 100%);
+                background-size: 15% 100%;
+                background-position-x: left;
+                background-repeat: no-repeat;
+                transition: background-size 500ms;
+                &:hover{
+                    background-size: 100% 100%;
+                }
+                @include breakpoint-down(small){
+                    @include flex(flex-end,center,row);
+                    font-size: 3rem;
                 }
             }
         }
