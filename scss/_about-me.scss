@@ -4,7 +4,7 @@
         max-width: 1580px;
         height: 65rem;
         margin: auto;
-        padding: 0px 20px ;
+        padding: 20px 20px ;
         @include flex(center,flex-start,row);
         @include breakpoint-down(tablet){
             @include flex(flex-start,center,column);
@@ -99,15 +99,19 @@
                 //     width: inherit;
                 //     height: 900px;
                 // }
-                @include breakpoint-down(tablet){
-                    margin-top: 0%;
-                    top: -4%;
-                    @include flex(center,center,row)
-                }   
                 img{
                     width: 85%;
                     background-position:center ;
                 }
+                @include breakpoint-down(tablet){
+                    margin-top: 0%;
+                    top: -4%;
+                    height: 500px;
+                    @include flex(center,center,row);
+                    img{
+                        width: 70%;
+                    }
+                }   
                 @include breakpoint-down(small){
                     top: 0%;
                     height: 100%;
@@ -125,8 +129,11 @@
             padding: 14% 10% 0% 10%;
             height: inherit;
             position: relative;
+            @include breakpoint-down(xlarge){
+                padding-top:22%;
+                }
             @include breakpoint-down(tablet){
-                gap: 50px;
+                gap: 80px;
                 }
             @include breakpoint-down(small){
                     @include flex(flex-start,flex-end,column);
