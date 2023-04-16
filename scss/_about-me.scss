@@ -1,6 +1,5 @@
 #about-me{
     width: 100vw;
-    height: 100vh;
     .about-me-inner{
         max-width: 1580px;
         height: 65rem;
@@ -26,6 +25,9 @@
                 @include breakpoint-down(tablet){
                 display: none;
                 }
+            }
+            @include breakpoint-down(xlarge){
+                flex: 1.5;
             }
             @include breakpoint-down(tablet){
                 flex: 1;
@@ -74,6 +76,9 @@
                         font-weight: 600;
                         color: $globalColor;
                         font-family: Arial, Helvetica, sans-serif;
+                        @include breakpoint-down(medium){
+                            font-size: 2rem;
+                            }
                         @include breakpoint-down(small){
                             font-size: 1.4rem;
                             }
@@ -87,17 +92,17 @@
                 margin-top: 10%;
                 filter: brightness(0.89);
                 position: relative;
-                @include breakpoint-down(medium){
-                    width: inherit;
-                    height: 400px;
-                }
+                // @include breakpoint-down(medium){
+                //     width: inherit;
+                //     height: 900px;
+                // }
                 @include breakpoint-down(tablet){
                     margin-top: 0%;
                     top: -4%;
                     @include flex(center,center,row)
                 }   
                 img{
-                    width: 60%;
+                    width: 85%;
                     background-position:center ;
                 }
                 @include breakpoint-down(small){
@@ -120,9 +125,9 @@
                 gap: 50px;
                 }
             @include breakpoint-down(small){
-                    @include flex(center,flex-end,column);
+                    @include flex(flex-start,flex-end,column);
                     flex: 1;
-                    gap: 50px;
+                    gap: 40px;
                 }
             .about:nth-child(1){
                 flex: 1;
@@ -133,14 +138,14 @@
                 text-align: justify;
                 text-indent: -1px;
                 top: 10px; 
-                padding-right: 60%;
+                padding-right: 40%;
                 margin-bottom: 0%;
                 &::before{
                     content:"";
                     background: url(/assests/about-elipse-style.png);
                     position: absolute;
-                    width: 200px;
-                    height: 90px;
+                    width: 250px;
+                    height: 80px;
                     top:-100px;
                     left: -4rem;
                     background-repeat: no-repeat;
@@ -149,6 +154,12 @@
                         height: 70px;
                         top: -70px;
                     }
+                }
+                @include breakpoint-down(xlarge){
+                    padding-right: 20%;
+                }
+                @include breakpoint-down(tablet){
+                    padding-right: 0%;
                 }
                 @include breakpoint-down(small){
                     padding-right:0%;
@@ -164,12 +175,12 @@
                 line-height: 1;
                 text-align: justify;
                 text-indent: -1px;
-                padding-left:50% ;
+                padding-left:35% ;
                 &::after{
                     content:"";
                     background: url(/assests/about-elipse-style.png);
                     position: absolute;
-                    width: 300px;
+                    width: 380px;
                     height: 90px;
                     top: -100px;
                     transform: scaleX(-1);
@@ -178,21 +189,27 @@
                     background-size: 66% 82%;
                     // @include breakpoint-down(medium){
                         //     height: 50px;
-                    //     width: 240px;
-                    //     right: 10rem;
-                    // }
-                    
+                        //     width: 240px;
+                        //     right: 10rem;
+                        // }
+                        
+                        @include breakpoint-down(small){
+                            height: 70px;
+                            top: -65px;
+                        }
+                    }
+                    @include breakpoint-down(xlarge){
+                        padding-left: 0%;
+                    }
+                    @include breakpoint-down(tablet){
+                        padding-left: 0%;
+                    }
                     @include breakpoint-down(small){
-                        height: 70px;
-                        top: -65px;
+                        padding-left:0%;
+                        height: inherit;
+                        
                     }
                 }
-                @include breakpoint-down(small){
-                    padding-left:0%;
-                    height: inherit;
-                    
-                }
-            }
             .about:nth-child(3){
                 flex: 1;
                 height: 100px;
@@ -201,12 +218,12 @@
                 line-height: 1;
                 text-align: justify;
                 text-indent: -1px;
-                padding-right:50% ;
+                padding-right:40% ;
                 &::after{
                     content:"";
                     background: url(/assests/about-elipse-style.png);
                     position: absolute;
-                    width: 300px;
+                    width: 380px;
                     height: 90px;
                     top: -100px;
                     left: -4rem;
@@ -216,6 +233,12 @@
                         height: 70px;
                         top: -60px;
                     }
+                }
+                @include breakpoint-down(xlarge){
+                    padding-right: 20%;
+                }
+                @include breakpoint-down(tablet){
+                    padding-right: 0%;
                 }
                 @include breakpoint-down(small){
                     padding-right:0%;
