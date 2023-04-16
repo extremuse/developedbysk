@@ -130,7 +130,7 @@
             @include breakpoint-down(small){
                     @include flex(flex-start,flex-end,column);
                     flex: 1;
-                    gap: 40px;
+                    gap: 60px;
                 }
             .about:nth-child(1){
                 flex: 1;
@@ -156,6 +156,7 @@
                     @include breakpoint-down(small){
                         height: 70px;
                         top: -70px;
+                        width: 240px;
                     }
                 }
                 @include breakpoint-down(xlarge){
@@ -199,6 +200,7 @@
                         @include breakpoint-down(small){
                             height: 70px;
                             top: -65px;
+                            width: 350px;
                         }
                     }
                     @include breakpoint-down(xlarge){
@@ -235,6 +237,7 @@
                     @include breakpoint-down(small){
                         height: 70px;
                         top: -60px;
+                        width: 350px;
                     }
                 }
                 @include breakpoint-down(xlarge){

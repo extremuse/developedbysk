@@ -1017,7 +1017,7 @@ a, :visited, :hover {
     align-items: flex-end;
     flex-direction: column;
     flex: 1;
-    gap: 40px;
+    gap: 60px;
   }
 }
 #about-me .about-me-inner .about-me-content-right .about:nth-child(1) {
@@ -1047,6 +1047,7 @@ a, :visited, :hover {
   #about-me .about-me-inner .about-me-content-right .about:nth-child(1)::before {
     height: 70px;
     top: -70px;
+    width: 240px;
   }
 }
 @media (max-width: 97.5rem) {
@@ -1091,6 +1092,7 @@ a, :visited, :hover {
   #about-me .about-me-inner .about-me-content-right .about:nth-child(2)::after {
     height: 70px;
     top: -65px;
+    width: 350px;
   }
 }
 @media (max-width: 97.5rem) {
@@ -1134,6 +1136,7 @@ a, :visited, :hover {
   #about-me .about-me-inner .about-me-content-right .about:nth-child(3)::after {
     height: 70px;
     top: -60px;
+    width: 350px;
   }
 }
 @media (max-width: 97.5rem) {
