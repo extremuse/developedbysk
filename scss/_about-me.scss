@@ -110,9 +110,10 @@
                 }
                 @include breakpoint-down(small){
                     top: 0%;
-                    height: 250px;
+                    height: 100%;
+                    @include flex(center,center,row);
                     img{
-                        width: 70%;
+                        width: 100%;
 
                     }
                 }

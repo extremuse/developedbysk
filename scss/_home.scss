@@ -351,6 +351,7 @@
         flex: 1.3;
         @include flex(center,flex-start,column);
         //background-color: red;
+        height: inherit;
         position: relative;
         @include breakpoint-down(xlarge){
             flex: 1;
@@ -360,10 +361,7 @@
         }
         @include breakpoint-down(tablet){
             flex: 1;
-            @include flex(center,flex-start,column);
-        }
-        @include breakpoint-down(small){
-           
+            @include flex(flex-end,flex-start,column);
         }
         
         &::before{
@@ -502,7 +500,7 @@
         @include flex(center,center,row);
         flex: 2;
         width: 100%;
-        height: 51rem;
+        height: inherit;
         @include breakpoint-down(medium){
             flex: 2.1;
         }
@@ -529,7 +527,7 @@
             width: inherit;
             position: relative;
             left: 83px;
-            height: 51rem;
+            height: 61rem;
             bottom: 0;
             background-image: url(/assests/triangle.svg.png);
             background-repeat: no-repeat;
