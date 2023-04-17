@@ -613,11 +613,9 @@ a, :visited, :hover {
 .home-content-image .my-image-left .triangle:nth-child(1) img {
   width: 100%;
 }
-@media (max-width: 39.9375rem) {
+@media (max-width: 97.5rem) {
   .home-content-image .my-image-left .triangle:nth-child(1) {
-    left: 0px;
-    background-size: 95% 70%;
-    background-position: 0% 100%;
+    height: 57rem;
   }
 }
 @media (max-width: 56.25rem) {
@@ -627,6 +625,9 @@ a, :visited, :hover {
 }
 @media (max-width: 39.9375rem) {
   .home-content-image .my-image-left .triangle:nth-child(1) {
+    left: 0px;
+    background-size: 95% 70%;
+    background-position: 0% 100%;
     height: 42rem;
   }
 }
@@ -747,7 +748,7 @@ a, :visited, :hover {
 }
 @media (max-width: 97.5rem) {
   .home-content-image .my-image-left::after {
-    background-size: 62% 90%;
+    background-size: 62% 87%;
     background-position: 54% 100%;
   }
 }
@@ -1196,4 +1197,14 @@ a, :visited, :hover {
     flex-direction: row;
     font-size: 3rem;
   }
+}
+
+#my-skills {
+  width: 100vw;
+}
+#my-skills .about-me-inner {
+  max-width: 1580px;
+  height: 65rem;
+  margin: auto;
+  padding: 20px 20px;
 }/*# sourceMappingURL=style.css.map */

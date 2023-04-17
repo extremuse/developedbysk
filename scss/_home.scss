@@ -537,15 +537,16 @@
                 width: 100%;
                 
             }
-            @include breakpoint-down(small){
-                left: 0px;
-                background-size:95% 70%;
-                background-position: 0% 100%;
+            @include breakpoint-down(xlarge){
+                height: 57rem;
             }
             @include breakpoint-down(tablet){
                 height: 38rem;
             }
             @include breakpoint-down(small){
+                left: 0px;
+                background-size:95% 70%;
+                background-position: 0% 100%;
                 height: 42rem;
             }
         }
@@ -642,7 +643,7 @@
             background-size: 67% 98%;
             bottom: 0;
             @include breakpoint-down(xlarge){
-                background-size: 62% 90%;
+                background-size: 62% 87%;
                 background-position: 54% 100%;
             }
             @include breakpoint-down(medium){
