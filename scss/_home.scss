@@ -341,14 +341,14 @@
     }    
     @include breakpoint-down(tablet){
         @include flex(center,center,column);
-        height:50rem;
+        height:55rem;
     }
     @include breakpoint-down(small){
         @include flex(center,center,column);
         height: 70rem;
     }
     .content-left{
-        flex: 1.3;
+        flex: 1;
         @include flex(center,flex-start,column);
         //background-color: red;
         height: inherit;
@@ -357,7 +357,7 @@
             flex: 1;
         }
         @include breakpoint-down(medium){
-            flex: 01;
+            flex: 1.3;
         }
         @include breakpoint-down(tablet){
             flex: 1;
@@ -498,14 +498,21 @@
     }
     .image-right{
         @include flex(center,center,row);
-        flex: 2;
+        flex: 1;
         width: 100%;
         height: inherit;
+        @media screen and (xlarge){ 
+            flex: 1.6;
+         }
+        @media screen and ( max-width:1365px){ 
+            flex: 1.6;
+         }
         @include breakpoint-down(medium){
-            flex: 2.1;
+            flex: 2.2;
         }
         @include breakpoint-down(tablet){
-            height: 38rem;
+            height: 45rem;
+            flex: 1;
         }
         @include breakpoint-down(small){
             height: 42rem;
@@ -515,43 +522,50 @@
     .my-image-left{
         flex:1;
         //height:100% ;
-        width: 100%;
+        height:inherit;
         position: relative;
+        padding-bottom: 15px;
+        @include flex(center,flex-end,row);
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background-size: 95% 90%;
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-image: url(/assests/triangle.svg.png);
+            @include breakpoint-down(medium){
+                background-size:80% 70% ;
+                background-position: 50% 100%;                
+            }
+            @include breakpoint-down(tablet){
+                background-size:80% 80% ;
+                background-position: center;
+                
+            }
+            @include breakpoint-down(small){
+                background-size:97% 90% ;
+                background-position: center;
+                
+            }
+            @media screen and ( max-width:496px){ 
+                background-size:97% 80% ;
+                background-position: 10% 100%;    
+             }
+        }
         @include breakpoint-down(xlarge){
-            flex: 0.98;
+            flex: 1;
         }
         @include breakpoint-down(small){
             flex: 2;
         }
-        .triangle:nth-child(1){
-            width: inherit;
-            position: relative;
-            left: 83px;
-            height: 61rem;
-            bottom: 0;
-            background-image: url(/assests/triangle.svg.png);
-            background-repeat: no-repeat;
-            background-size: 73% 90%;
-            background-position: 0% 100%;
-            img{
-                width: 100%;
-                
-            }
-            @include breakpoint-down(xlarge){
-                height: 57rem;
-            }
-            @include breakpoint-down(tablet){
-                height: 38rem;
-            }
-            @include breakpoint-down(small){
-                left: 0px;
-                background-size:95% 70%;
-                background-position: 0% 100%;
-                height: 42rem;
-            }
-        }
         .code-icons{
             position: absolute;
+            filter: contrast(1.2);
+
             width: 75px;
          img{
             width: 100%;
@@ -559,8 +573,9 @@
 
         }
         .code-icons:nth-child(2){
-            top: 30%;
-            left: 17%;
+            top: 40%;
+            width: 85px;
+            left: 9%;
             @include breakpoint-down(medium){
                 width: 70px;
                 top: 30%;
@@ -578,7 +593,8 @@
         .code-icons:nth-child(3){
             top: 19%;
             width: 60px;
-            right: 25%;
+            right: 17%;
+            filter: drop-shadow(1px 1px 5px $fontGrey);
             @include breakpoint-down(medium){
                 width: 42px;
                 right: 22%;
@@ -595,9 +611,12 @@
             }
         }
         .code-icons:nth-child(4){
-            bottom: 45%;
-            right: 33%;
-            width: 70px;
+            bottom: 40%;
+            right:20%;
+            width: 80px;
+            filter: contrast(10);
+            filter: brightness(2);
+            filter: drop-shadow(1px 1px 25px $globalColor);
             //background-color: red;
             animation: circular 15s linear infinite ;
             @include breakpoint-down(medium){
@@ -614,17 +633,13 @@
                 bottom: 27%;
             }
         }
-
+        
         .code-icons:nth-child(5){
             bottom: 13%;
-            left: 9%;
-            width: 55px;
+            left: 2%;
+            width: 60px;
             @include breakpoint-down(medium){
                 width: 45px;
-                left: 7%;
-            }
-            @include breakpoint-down(medium){
-                width: 50px;
                 left: 7%;
             }
             @include breakpoint-down(small){
@@ -633,61 +648,95 @@
                 bottom: 6%;
             }
         }
-        &::after{
-            content: "";
-            position: absolute;
-            background: url(/assests/sk.png);width: 93%;
-            height: 85%;
-            background-position: 50% 10%;
-            background-repeat: no-repeat;
-            background-size: 67% 98%;
-            filter: brightness(0.9);
-            filter: contrast(1);
-            filter: saturate(1.1);
-            bottom: 0;
+    .my-image{
+        width: 100%;
+        //background-color: antiquewhite;
+        z-index: 3;
+        @include flex(center,center,row);
+        @media screen and ( max-width:380px){ 
+           padding-right: 10px;
+        }
+        img{
+            width: 540px;
             @include breakpoint-down(xlarge){
-                background-size: 62% 87%;
-                background-position: 54% 100%;
+                width: 480px;
             }
+            @media screen and ( max-width:1365px){ 
+                width: 420px;
+             }
             @include breakpoint-down(medium){
-                background-size: 75% 90%;
-                bottom: 0;
-                background-position: 54% 100%;
+                width: 360px;
             }
             @include breakpoint-down(tablet){
-                background-size: 58% 100%;
-                bottom: 0;
-                background-position: 54% 100%;
+                width: 380px;
             }
             @include breakpoint-down(small){
-                background-size: 88% 82%;
-                bottom: 0;
-                background-position: 54% 100%;
+                width: 350px;
             }
-            @media screen and ( max-height:950px){ 
-                background-size:80% 90%;
+            @media screen and ( max-width:496px){ 
+               width: 300px;
             }
-            @media screen and (max-width:400px){ 
-                background-size:85% 90%;
+            @media screen and ( max-width:388px){ 
+               width: 250px;
             }
-            @media screen and (max-width:320px ),( max-height:811px){ 
-                background-size:70% 75%;
-            }
-            @media screen and (max-width:320px ),( max-height:640px){ 
-                background-size:90% 83%;
+
             }
         }
+        // &::after{
+        //     content: "";
+        //     position: absolute;
+        //     background: url(/assests/sk.png);width: 93%;
+        //     height: 85%;
+        //     background-position: 50% 10%;
+        //     background-repeat: no-repeat;
+        //     background-size: 67% 98%;
+        //     filter: brightness(0.9);
+        //     filter: contrast(1);
+        //     filter: saturate(1.1);
+        //     bottom: 0;
+        //     @include breakpoint-down(xlarge){
+        //         background-size: 62% 87%;
+        //         background-position: 54% 100%;
+        //     }
+        //     @include breakpoint-down(medium){
+        //         background-size: 75% 90%;
+        //         bottom: 0;
+        //         background-position: 54% 100%;
+        //     }
+        //     @include breakpoint-down(tablet){
+        //         background-size: 58% 100%;
+        //         bottom: 0;
+        //         background-position: 54% 100%;
+        //     }
+        //     @include breakpoint-down(small){
+        //         background-size: 88% 82%;
+        //         bottom: 0;
+        //         background-position: 54% 100%;
+        //     }
+        //     @media screen and ( max-height:950px){ 
+        //         background-size:80% 90%;
+        //     }
+        //     @media screen and (max-width:400px){ 
+        //         background-size:85% 90%;
+        //     }
+        //     @media screen and (max-width:320px ),( max-height:811px){ 
+        //         background-size:70% 75%;
+        //     }
+        //     @media screen and (max-width:320px ),( max-height:640px){ 
+        //         background-size:90% 83%;
+        //     }
+        
 
     }
     .social-icons-right{
-        flex: 0;
+        flex:0.1;
         //background-color: yellow;
         position: relative;
         height: inherit;
         @include flex(flex-end,center,column);
         padding-bottom: 20px;
         @include breakpoint-down(small){
-            flex: 0;
+            flex: 0.1;
             padding-bottom: -5px ;
             bottom: -40px;
         }
