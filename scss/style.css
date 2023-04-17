@@ -843,7 +843,7 @@ a, :visited, :hover {
 }
 #about-me .about-me-inner {
   max-width: 1580px;
-  height: 65rem;
+  height: 68rem;
   margin: auto;
   padding: 20px 20px;
   display: flex;
@@ -861,7 +861,7 @@ a, :visited, :hover {
 }
 @media (max-width: 39.9375rem) {
   #about-me .about-me-inner {
-    height: 75rem;
+    height: 85rem;
   }
 }
 #about-me .about-me-inner .about-me-content-left {
