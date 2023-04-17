@@ -1012,7 +1012,7 @@ a, :visited, :hover {
   align-items: flex-end;
   flex-direction: column;
   padding: 14% 10% 0% 10%;
-  height: inherit;
+  height: 65rem;
   position: relative;
 }
 @media (max-width: 97.5rem) {
@@ -1173,10 +1173,7 @@ a, :visited, :hover {
 #about-me .about-me-inner .about-me-content-right .about-me-text {
   font-size: 3.5rem;
   letter-spacing: -2px;
-  position: relative;
-  bottom: 10px;
-  right: 0;
-  flex: 0.1;
+  flex: 0;
   word-spacing: 0px;
   font-weight: 600;
   color: #a5a5a5;

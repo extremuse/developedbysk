@@ -127,7 +127,7 @@
             flex: 1;
             @include flex(flex-start,flex-end,column);
             padding: 14% 10% 0% 10%;
-            height: inherit;
+            height:65rem;
             position: relative;
             @include breakpoint-down(xlarge){
                 padding-top:22%;
@@ -263,10 +263,7 @@
             .about-me-text{
                 font-size: 3.5rem;
                 letter-spacing: -2px;
-                position: relative;
-                bottom: 10px;
-                right: 0;
-                flex: 0.1;
+                flex: 0;
                 word-spacing: 0px;
                 //font-family: 'PT Mono', monospace;
                 font-weight: 600;
