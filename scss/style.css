@@ -1023,6 +1023,7 @@ a, :visited, :hover {
 @media (max-width: 56.25rem) {
   #about-me .about-me-inner .about-me-content-right {
     gap: 80px;
+    height: 70rem;
   }
 }
 @media (max-width: 39.9375rem) {

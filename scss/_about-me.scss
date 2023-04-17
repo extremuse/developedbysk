@@ -134,6 +134,7 @@
                 }
             @include breakpoint-down(tablet){
                 gap: 80px;
+                height: 70rem;
                 }
             @include breakpoint-down(small){
                     @include flex(flex-start,flex-end,column);
