@@ -4,6 +4,13 @@
         align-items: $align;
         flex-direction:$direction ;
     }
+    @mixin hover($bg-size){
+        background-image: linear-gradient(to bottom ,transparent 0%, transparent 93% , $globalColor 93% ,$globalColor 100%);
+        background-size: $bg-size;
+        background-position-x: left;
+        background-repeat: no-repeat;
+        transition: background-size 500ms;
+    }
 
 
     //Responsive breakpoints

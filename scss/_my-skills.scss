@@ -1,9 +1,157 @@
 #my-skills{
     width: 100vw;
-    .about-me-inner{
+    position: relative;
+    .my-skills-inner{
         max-width: 1580px;
-        height: 65rem;
+        height: 68rem;
         margin: auto;
+        //background-color: $backgroundColor2;
+        //padding: 20px 20px;
+        position: relative;
+        @include flex(flex-start,center,row);
         padding: 20px 20px;
+        .my-skills-cards-left{
+            flex: 1;
+            height: 65rem;
+            padding-bottom: 100px;
+            padding-top: 10px;
+            &::before{
+                content: "02.";
+                font-family: 'PT Mono', monospace;
+                position: absolute;
+                bottom: 0;
+                color: $fontGrey;
+                font-size: 3rem;
+                @include breakpoint-down(tablet){
+                display: none;
+                }
+            }
+            .my-skills-card{
+                height: 15rem;
+                width: 14rem;
+                border-radius: 30px;
+                background-color: $backgroundColor;
+                padding: 23px;
+                position: relative;
+                border: 6px solid $globalColor;
+                border-bottom: 0rem;
+                border-left: 0rem;
+                @include flex(flex-start,flex-start,column);
+                &:hover{
+                    transform: scale(0.9);
+                }
+                .card-name{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    width: 100%;    
+                    flex: 0;
+                    color: $fontGrey2;
+                    @include hover(10% 100%);
+                }
+                .card-about{
+                    @include flex(center,flex-start,column);
+                    font-size: 0.8rem;
+                    line-height: 1.2;
+                    flex: 1;
+                    align-items: flex-start;
+                }
+                .card-readmore{
+                    flex: 1;
+                    color: $globalColor;
+                    position: relative;
+                    width: 100%;
+                    font-size: 1rem;
+                    @include flex(flex-end,flex-end,column);
+                    }
+                }
+            }
+            .my-skills-card:nth-child(1){
+                margin-bottom: 50px;
+                .card-name{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    width: 100%;    
+                    flex: 0;
+                    color: $fontGrey2;
+                    @include hover(10% 100%);
+                    &:hover{
+                        background-size:47% 100%;
+                    }
+                }
+            }
+            .my-skills-card:nth-child(2){
+                margin-bottom: 70px;
+                margin-left:110px;
+                height: 16rem;
+                width: 15rem;
+                &::after{
+                    height: 16.2rem;
+                    width: 15.3rem;
+                }
+                .card-name{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    width: 100%;    
+                    flex: 0;
+                    color: $fontGrey2;
+                    @include hover(10% 100%);
+                    &:hover{
+                        background-size:70% 100%;
+                    }
+                }
+            }
+            .my-skills-card:nth-child(3){
+                margin-bottom: 70px;
+                margin-left: 30px;
+                height: 17rem;
+                width: 16rem;
+                &::after{
+                    height: 17.2rem;
+                    width: 16.3rem;
+                }
+                .card-name{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    width: 100%;    
+                    flex: 0;
+                    color: $fontGrey2;
+                    @include hover(10% 100%);
+                    &:hover{
+                        background-size:57% 100%;
+                    }
+                }
+            }
+        }
+        .my-skills-future-right{
+            flex: 1;
+            background-color: black;
+            .my-skills-future-line-top{
+                font-size: 2.5rem;
+                color: $fontGrey;
+                font-weight: 600;
+                .future{
+                    font-size: 4rem;
+                    color: $globalColor;
+                }
+            }
+            .my-skills-future-line-center{
+                font-size: 2rem;
+                font-weight: 600;
+                color: $white;
+                .curly-brakets{
+                    font-weight: 900;
+                    color: $fontGrey;
+                }
+            }
+            .my-skills-future-line-bottom{
+                font-size: 1.8rem;
+                color: $white;
+
+            }
+        }
     }
+.my-skills-bg{
+    background-color: $backgroundColor2;
+    position: relative;
+    // z-index: -99;
 }

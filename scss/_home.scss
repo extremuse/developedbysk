@@ -641,13 +641,16 @@
             background-position: 50% 10%;
             background-repeat: no-repeat;
             background-size: 67% 98%;
+            filter: brightness(0.9);
+            filter: contrast(1);
+            filter: saturate(1.1);
             bottom: 0;
             @include breakpoint-down(xlarge){
                 background-size: 62% 87%;
                 background-position: 54% 100%;
             }
             @include breakpoint-down(medium){
-                background-size: 70% 90%;
+                background-size: 75% 90%;
                 bottom: 0;
                 background-position: 54% 100%;
             }
@@ -657,12 +660,21 @@
                 background-position: 54% 100%;
             }
             @include breakpoint-down(small){
-                background-size: 85% 85%;
+                background-size: 88% 82%;
                 bottom: 0;
                 background-position: 54% 100%;
             }
-            @media screen and (max-width:420px){ 
-                background-size: 85% 70%;
+            @media screen and ( max-height:950px){ 
+                background-size:80% 90%;
+            }
+            @media screen and (max-width:400px){ 
+                background-size:85% 90%;
+            }
+            @media screen and (max-width:320px ),( max-height:811px){ 
+                background-size:70% 75%;
+            }
+            @media screen and (max-width:320px ),( max-height:640px){ 
+                background-size:90% 83%;
             }
         }
 

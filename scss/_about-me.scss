@@ -9,6 +9,9 @@
         @include breakpoint-down(tablet){
             @include flex(flex-start,center,column);
             } 
+        @include breakpoint-down(tablet){
+            height: 91rem
+        }     
         @include breakpoint-down(small){
             height: 90rem
         }     
@@ -38,7 +41,7 @@
                 align-items: center;
             }
             @include breakpoint-down(small){
-                flex: 9;
+                flex: 0;
             }
             .creative-top{
                 font-size: 2.5rem;
@@ -269,13 +272,9 @@
                 //font-family: 'PT Mono', monospace;
                 font-weight: 600;
                 color: $fontGrey2;
-                background-image: linear-gradient(to bottom ,transparent 0%, transparent 95% , $globalColor 95% ,$globalColor 100%);
-                background-size: 15% 100%;
-                background-position-x: left;
-                background-repeat: no-repeat;
-                transition: background-size 500ms;
+                @include hover(15% 100%);
                 &:hover{
-                    background-size: 100% 100%;
+                    background-size: 100% 100%
                 }
                 @include breakpoint-down(small){
                     @include flex(flex-end,center,row);

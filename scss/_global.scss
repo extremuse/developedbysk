@@ -3,7 +3,7 @@ html{
     box-sizing: border-box;
     @include breakpoint-up(large){
         font-size: 90%;
-        padding: 0px 50px 0px 50px;
+
     }
     @include breakpoint-down(xlarge){
         font-size: 80%;
