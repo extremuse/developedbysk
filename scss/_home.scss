@@ -674,19 +674,19 @@
             }
             @include breakpoint-down(small){
                 width: 40px;
-                left: -01%;
+                left: -04%;
                 bottom: 15%;
             }
             @media  screen and (max-width:492px) {
                 width: 40px;
                 left: -9.8%;
-                bottom: 10%;
+                bottom: 20%;
                 
             }
             @media screen and ( max-width:380px){  
                 width: 30px;
                 left: -13%;
-                bottom: 10%;
+                bottom: 15%;
             }
         }
     .my-image{
@@ -723,50 +723,6 @@
 
             }
         }
-        // &::after{
-        //     content: "";
-        //     position: absolute;
-        //     background: url(/assests/sk.png);width: 93%;
-        //     height: 85%;
-        //     background-position: 50% 10%;
-        //     background-repeat: no-repeat;
-        //     background-size: 67% 98%;
-        //     filter: brightness(0.9);
-        //     filter: contrast(1);
-        //     filter: saturate(1.1);
-        //     bottom: 0;
-        //     @include breakpoint-down(xlarge){
-        //         background-size: 62% 87%;
-        //         background-position: 54% 100%;
-        //     }
-        //     @include breakpoint-down(medium){
-        //         background-size: 75% 90%;
-        //         bottom: 0;
-        //         background-position: 54% 100%;
-        //     }
-        //     @include breakpoint-down(tablet){
-        //         background-size: 58% 100%;
-        //         bottom: 0;
-        //         background-position: 54% 100%;
-        //     }
-        //     @include breakpoint-down(small){
-        //         background-size: 88% 82%;
-        //         bottom: 0;
-        //         background-position: 54% 100%;
-        //     }
-        //     @media screen and ( max-height:950px){ 
-        //         background-size:80% 90%;
-        //     }
-        //     @media screen and (max-width:400px){ 
-        //         background-size:85% 90%;
-        //     }
-        //     @media screen and (max-width:320px ),( max-height:811px){ 
-        //         background-size:70% 75%;
-        //     }
-        //     @media screen and (max-width:320px ),( max-height:640px){ 
-        //         background-size:90% 83%;
-        //     }
-        
 
     }
     .social-icons-right{
@@ -778,7 +734,7 @@
         padding-bottom: 20px;
         @include breakpoint-down(small){
             flex: 0.1;
-            padding-bottom: -5px ;
+            padding-bottom: 50px ;
             bottom: -40px;
         }
         .social_icons{
@@ -806,7 +762,8 @@
             height: 45%;
             @include breakpoint-down(small){
                 width: 2px;
-                height: 48%;
+                height: 45%;
+                bottom: 13rem;
             }
         }
     }

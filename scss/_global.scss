@@ -1,6 +1,7 @@
 html{
     font-size:100%;
     box-sizing: border-box;
+    overflow-x: hidden;
     @include breakpoint-up(large){
         font-size: 90%;
 
@@ -16,6 +17,9 @@ html{
     }
     @include breakpoint-down(small){
         font-size: 78%;
+    }
+    @media (max-width:400px) {
+        font-size: 67%;
     }
 }
 *{
