@@ -15,7 +15,10 @@
             height: 85rem;
         }
         @include breakpoint-down(tablet){
-            height: 90rem;
+            height: 80rem;
+        }
+        @include breakpoint-down(small){
+            height: 78em;
         }
         .my-skills-cards-left{
             flex: 1;
@@ -26,9 +29,10 @@
             @include breakpoint-down(medium){
                 padding-bottom: 20px;
             }
-            @include breakpoint-down(small){
+            @include breakpoint-down(tablet){
                 padding-bottom: 10px;
                 padding-top: 50px;
+                @include flex(flex-start,flex-end,column);
             }
             &::before{
                 content: "02.";
@@ -83,6 +87,10 @@
             .my-skills-card:nth-child(1){
                 margin-bottom: 30px;
                 margin-left: 60px;
+                @include breakpoint-down(tablet){
+                    margin-right: 47%;
+                    margin-bottom: 20px;
+                }
                 .card-name{
                     font-size: 1.5rem;
                     font-weight: 600;
@@ -100,6 +108,9 @@
                 margin-left:200px;
                 height: 16rem;
                 width: 15rem;
+                @include breakpoint-down(tablet){
+                    margin-right: 140px;
+                }
                 &::after{
                     height: 16.2rem;
                     width: 15.3rem;
@@ -121,6 +132,9 @@
                 margin-left: 40px;
                 height: 17rem;
                 width: 16rem;
+                @include breakpoint-down(tablet){
+                    margin-right: 200px;
+                }
                 &::after{
                     height: 17.2rem;
                     width: 16.3rem;
@@ -348,8 +362,30 @@
             }
         }
     }
-.my-skills-bg{
-    background-color: $backgroundColor2;
+    .my-skills-bg{
+        background-color: $backgroundColor2;
     position: relative;
     // z-index: -99;
+}
+.my-skills-text-2{
+    font-size: 3.5rem;
+    letter-spacing: -2px;
+    word-spacing: 0px;
+    position:relative;
+    bottom: 0;
+    flex: 0;
+    display: none;
+    //font-family: 'PT Mono', monospace;
+    font-weight: 600;
+    color: $fontGrey2;
+    @include hover(15% 100%);
+    &:hover{
+        background-size: 100% 100%
+    }
+    @include breakpoint-down(tablet){
+        display: block;
+    }
+    @include breakpoint-down(small){
+        right: 5%;
+    }
 }
