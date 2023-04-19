@@ -8,6 +8,9 @@
         margin:auto;
         padding: 50px 20px;
         @include flex(center,center,column);
+        @include breakpoint-down(tablet){
+            height: 70rem;
+        }
 
         &::before{
             content: "03.";
@@ -24,10 +27,19 @@
         .projects-top{
             @include flex(center,center,row);
             padding: 0% 10% 20px 10%;
+            @include breakpoint-down(tablet){
+                @include flex(flex-start,center,column);
+                
+                
+            }
             .project-top-image{
                 flex: 1;                         
                 @include breakpoint-down(tablet){
                     flex: 2;
+                }
+                @include breakpoint-down(tablet){
+                    width: 100%;
+                    margin-left: -30%;
                 }
                 img{
                     width: 85%;
@@ -50,7 +62,20 @@
                     flex: 0;
 
                 }
+                @include breakpoint-down(tablet){
+                    flex: 0;
+                    margin-top: -50%;
+                    width:83%;
+                    margin-right: -70%
 
+                }
+                @include breakpoint-down(small){
+                    flex: 0;
+                    margin-top: -50%;
+                    width:120%;
+                    margin-right: -35%
+
+                }
 
                 .project-name{
                     @include flex(center,flex-end,column);
@@ -100,6 +125,10 @@
                     flex: 2;
                     right: 0;
                 }
+                @include breakpoint-down(tablet){
+                    width: 100%;
+                    margin-right: -30%;
+                }
                 img{
                     width: 85%;
                     @include breakpoint-down(xlarge){
@@ -118,6 +147,16 @@
                 position: relative;
                 @include breakpoint-down(tablet){
                     flex: 0;
+                    margin-top: -50%;
+                    width:83%;
+                    margin-left: -40%
+
+                }
+                @include breakpoint-down(tablet){
+                    flex: 0;
+                    margin-top: -50%;
+                    width:120%;
+                    margin-left: 0%
 
                 }
                 .project-name{
