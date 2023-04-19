@@ -1,0 +1,101 @@
+#projects{
+    width: 100vw;
+    height:100vh;
+    .projects-inner{
+        height: inherit;
+        max-width:1580px;
+        margin:auto;
+        padding: 50px 0px;
+        .projects-top{
+            @include flex(center,center,row);
+            padding-bottom: 20px;
+            .project-top-image{
+                width: 600px;                
+                img{
+                    width: 100%;
+                }
+            }
+            .project-top-image-content{
+                @include flex(center,center,column);
+                margin-left: -3%;
+                .project-name{
+                    width:510px;
+                    @include flex(center,flex-end,column);
+                    font-size: 3.4rem;
+                    font-weight: 600;
+                    color: $globalColor;
+                    line-height: 0.9;
+                }
+                .project-info{
+                    border-radius: 24px;
+                    color: $fontGrey;
+                    text-align: justify;
+                    width: 510px;
+                    text-indent: 0.7px;
+                    padding: 20px 50px ;
+                    background-color: $backgroundColor2;
+                }
+                .project-files{
+                    @include flex(flex-end,flex-end,row);
+                    width: 510px;
+                    gap: 10px;
+                    height: 2.5rem;
+                    .project-files-github-btn{
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                    .project-files-site-btn{
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+            }
+        }
+        .projects-bottom{
+            @include flex(center,center,row-reverse);
+            gap: 10px;
+            .project-bottom-image{
+                width: 600px;                
+                img{
+                    width: 100%;
+                }
+            }
+            .project-bottom-image-content{
+                @include flex(center,center,column);
+                margin-right: -3%;
+                z-index: 999;
+                .project-name{
+                    width:510px;
+                    @include flex(center,flex-start,column);
+                    font-size: 3.4rem;
+                    font-weight: 600;
+                    color: $globalColor;
+                    line-height: 0.9;
+                }
+                .project-info{
+                    border-radius: 24px;
+                    color: $fontGrey;
+                    text-align: justify;
+                    width: 510px;
+                    text-indent: 0.7px;
+                    padding: 20px 50px ;
+                    background-color: $backgroundColor2;
+                }
+                .project-files{
+                    @include flex(flex-start,flex-start,row);
+                    width: 510px;
+                    gap: 10px;
+                    height: 2.5rem;
+                    .project-files-github-btn{
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                    .project-files-site-btn{
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
