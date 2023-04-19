@@ -6,14 +6,18 @@
         max-width:1570px;
         position: relative;
         margin:auto;
-        padding: 50px 20px;
-        @include flex(center,center,column);
+        padding: 80px 7%;
+        @include flex(center,flex-start,column);
+        gap: 80px;
         @include breakpoint-down(tablet){
-            height: 70rem;
+            @include flex(center,center,column);
+        }
+        @include breakpoint-down(small){
+            padding: 0px 100px;
         }
 
         &::before{
-            content: "03.";
+            content: "04.";
             font-family: 'PT Mono', monospace;
             position: absolute;
             bottom: 0;
@@ -25,58 +29,55 @@
             }
         }
         .projects-top{
-            @include flex(center,center,row);
-            padding: 0% 10% 20px 10%;
-            @include breakpoint-down(tablet){
-                @include flex(flex-start,center,column);
-                
+            @include flex(flex-start,center,row);
+            width: 45rem;
+            height: 25rem;
+            margin-left: 1%;
+            @include breakpoint-down(small){
+                @include flex(center,center,row);
                 
             }
-            .project-top-image{
-                flex: 1;                         
+            .project-top-image{   
+                background-image: url(/assests/kizuki.png);
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 19px;
+                width: 45rem;
+                height: 25rem;
+                filter: grayscale(1) brightness(60%);
+                
+                // background-color: aqua;
                 @include breakpoint-down(tablet){
-                    flex: 2;
+                    filter:grayscale(90%) contrast(1) brightness(30%) blur(1px);
                 }
-                @include breakpoint-down(tablet){
-                    width: 100%;
-                    margin-left: -30%;
-                }
-                img{
-                    width: 85%;
-                    @include breakpoint-down(xlarge){
-                        width: 100%;
-                    }
-                    filter: grayscale(1);
-                    &:hover{
-                        filter: grayscale(0);
-                    }
+                @include breakpoint-down(small){
+                    width: 35rem;
+                    height: 21rem;
+                }                    
+                &:hover{
+                    filter: grayscale(0);
+                    background-size: 103% 103%;
                 }
             }
             .project-top-image-content{
                 @include flex(center,flex-end,column);
-                z-index: 1;
-                flex: 1;
-                left: -15%;
-                position: relative;
-                @include breakpoint-down(tablet){
-                    flex: 0;
-
+                position: absolute;
+                width: 32rem;
+                right: 25%;
+                @include breakpoint-down(xlarge){
+                    right: 30%;
                 }
                 @include breakpoint-down(tablet){
-                    flex: 0;
-                    margin-top: -50%;
-                    width:83%;
-                    margin-right: -70%
-
+                    right: 20%;
                 }
                 @include breakpoint-down(small){
-                    flex: 0;
-                    margin-top: -50%;
-                    width:120%;
-                    margin-right: -35%
-
+                    right: 05%;
                 }
-
+                // @include breakpoint-down(xlarge){
+                    //     right: 10%;
+                // }
+                
                 .project-name{
                     @include flex(center,flex-end,column);
                     font-size: 3.4rem;
@@ -93,6 +94,9 @@
                     text-indent: 0.7px;
                     padding: 20px 50px ;
                     background-color: $black;
+                    @include breakpoint-down(small){
+                        padding: 10px 30px; 
+                    }                    
                 }
                 .project-files{
                     @include flex(flex-end,flex-end,row);
@@ -110,55 +114,84 @@
             }
         }
         .projects-bottom{
-            @include flex(center,center,row-reverse);
-            padding: 0% 10% 20px 10%;
+            @include flex(flex-end,center,row);
+            position: relative;
+            right: 0;
+            width: 100%;
             @include breakpoint-down(tablet){
-                @include flex(center,center,column);
-                
+                @include flex(flex-start,center,row);
+                left: 0;
+                width: 45rem;
+                height: 25rem;
                 
             }
-            .project-bottom-image{
-                flex: 1;                         
+            @include breakpoint-down(small){
+                @include flex(center,center,row-reverse);
+            }
+            .project-bottom-image{   
+                background-image: url(/assests/easybank.png);
+                width: 45rem;
+                height: 25rem;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 19px;
                 position: relative;
-                right: 7.4%;
-                @include breakpoint-down(tablet){
-                    flex: 2;
-                    right: 0;
+                filter: grayscale(100%) brightness(35%);
+                @include breakpoint-down(medium){
+                    filter:grayscale(150%) contrast(1) brightness(30%) blur(1px);
                 }
                 @include breakpoint-down(tablet){
-                    width: 100%;
-                    margin-right: -30%;
+                    filter:grayscale(100%) contrast(1) brightness(10%) blur(1px);
                 }
-                img{
-                    width: 85%;
-                    @include breakpoint-down(xlarge){
-                        width: 100%;
-                    }
-                    filter: grayscale(1);
-                    &:hover{
-                        filter: grayscale(0);
-                    }
+                @include breakpoint-down(small){
+                    width: 35rem;
+                    height: 21rem;
+                }      
+                // &::before{
+                //     content: "";
+                //     position: absolute;
+                //     top: 0;
+                //     bottom: 0;
+                //     left: 0;
+                //     right: 0;
+                //     z-index: 1;
+                //     border-radius: 20px;
+                //     background-color: rgb(0,0,0,0.8);
+                // }
+                &:hover + ::before{
+                    background-color: rgb(0,0,0,0);
+                    
+                }
+                // background-color: aqua;                    
+                &:hover{
+                    filter: grayscale(0);
+                    background-image: url(/assests/Easybank.png);
+                    background-size: 103% 103%;
+                    filter: brightness(0.9);
+                }
+                @media  (max-width:1553px) , (min-width:1361) {
+                    margin-right: 10%;
+                }
+                @include breakpoint-down(tablet){
+                    margin-right: 0%
                 }
             }
             .project-bottom-image-content{
                 @include flex(center,flex-start,column);
+                position: absolute;
                 z-index: 1;
-                flex: 1;
-                position: relative;
-                @include breakpoint-down(tablet){
-                    flex: 0;
-                    margin-top: -50%;
-                    width:83%;
-                    margin-left: -40%
-
+                width: 32rem;
+                left: 19%;
+                @include breakpoint-down(xlarge){
+                    left: 19%;
                 }
-                @include breakpoint-down(tablet){
-                    flex: 0;
-                    margin-top: -50%;
-                    width:120%;
-                    margin-left: 0%
-
+                @include breakpoint-down(small){
+                    left: 10%;
+                    padding-left:30px; 
                 }
+                
+                
                 .project-name{
                     @include flex(center,flex-end,column);
                     font-size: 3.4rem;
@@ -175,9 +208,12 @@
                     text-indent: 0.7px;
                     padding: 20px 50px ;
                     background-color: $black;
+                    @include breakpoint-down(small){
+                        padding: 10px 30px; 
+                    }      
                 }
                 .project-files{
-                    @include flex(flex-start,flex-start,row);
+                    @include flex(flex-end,flex-end,row);
                     gap: 10px;
                     height: 2.5rem;
                     .project-files-github-btn{
@@ -202,6 +238,9 @@
             //font-family: 'PT Mono', monospace;
             font-weight: 600;
             color: $fontGrey2;
+            @include breakpoint-down(tablet){
+                right: 5.7%;
+            }
             @include hover(15% 100%);
             &:hover{
                 background-size: 100% 100%

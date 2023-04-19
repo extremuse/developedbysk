@@ -10,7 +10,7 @@
             @include flex(flex-start,center,column);
             } 
         @include breakpoint-down(tablet){
-            height: 91rem
+            height: 100rem
         }     
         @include breakpoint-down(small){
             height: 100rem
@@ -136,13 +136,14 @@
                 padding-top:22%;
                 }
             @include breakpoint-down(tablet){
-                gap: 80px;
-                height: 70rem;
+                gap: 0px;
+                height: 50rem;
                 }
             @include breakpoint-down(small){
                     @include flex(flex-start,flex-end,column);
                     flex: 1;
-                    gap: 60px;
+                    gap: 0px;
+
                 }
             .about:nth-child(1){
                 flex: 1;
@@ -267,18 +268,20 @@
             .about-me-text{
                 font-size: 3.5rem;
                 letter-spacing: -2px;
-                flex: 0;
                 word-spacing: 0px;
+                position:absolute;
+                bottom: 0;
+                right: 10.7%;
+                flex: 0;
                 //font-family: 'PT Mono', monospace;
                 font-weight: 600;
                 color: $fontGrey2;
+                @include breakpoint-down(tablet){
+                    right: 5.7%;
+                }
                 @include hover(15% 100%);
                 &:hover{
                     background-size: 100% 100%
-                }
-                @include breakpoint-down(small){
-                    @include flex(flex-end,center,row);
-                    font-size: 3rem;
                 }
             }
         }

@@ -948,7 +948,7 @@ a, :visited, :hover {
 }
 @media (max-width: 56.25rem) {
   #about-me .about-me-inner {
-    height: 91rem;
+    height: 100rem;
   }
 }
 @media (max-width: 39.9375rem) {
@@ -1114,8 +1114,8 @@ a, :visited, :hover {
 }
 @media (max-width: 56.25rem) {
   #about-me .about-me-inner .about-me-content-right {
-    gap: 80px;
-    height: 70rem;
+    gap: 0px;
+    height: 50rem;
   }
 }
 @media (max-width: 39.9375rem) {
@@ -1125,7 +1125,7 @@ a, :visited, :hover {
     align-items: flex-end;
     flex-direction: column;
     flex: 1;
-    gap: 60px;
+    gap: 0px;
   }
 }
 #about-me .about-me-inner .about-me-content-right .about:nth-child(1) {
@@ -1266,8 +1266,11 @@ a, :visited, :hover {
 #about-me .about-me-inner .about-me-content-right .about-me-text {
   font-size: 3.5rem;
   letter-spacing: -2px;
-  flex: 0;
   word-spacing: 0px;
+  position: absolute;
+  bottom: 0;
+  right: 10.7%;
+  flex: 0;
   font-weight: 600;
   color: #a5a5a5;
   background-image: linear-gradient(to bottom, transparent 0%, transparent 93%, #00f4ff 93%, #00f4ff 100%);
@@ -1276,17 +1279,13 @@ a, :visited, :hover {
   background-repeat: no-repeat;
   transition: background-size 500ms;
 }
+@media (max-width: 56.25rem) {
+  #about-me .about-me-inner .about-me-content-right .about-me-text {
+    right: 5.7%;
+  }
+}
 #about-me .about-me-inner .about-me-content-right .about-me-text:hover {
   background-size: 100% 100%;
-}
-@media (max-width: 39.9375rem) {
-  #about-me .about-me-inner .about-me-content-right .about-me-text {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: row;
-    font-size: 3rem;
-  }
 }
 
 #my-skills {
@@ -1350,7 +1349,7 @@ a, :visited, :hover {
   }
 }
 #my-skills .my-skills-inner .my-skills-cards-left::before {
-  content: "02.";
+  content: "03.";
   font-family: "PT Mono", monospace;
   position: absolute;
   bottom: 0;
@@ -1828,19 +1827,28 @@ a, :visited, :hover {
   max-width: 1570px;
   position: relative;
   margin: auto;
-  padding: 50px 20px;
+  padding: 80px 7%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
+  gap: 80px;
 }
 @media (max-width: 56.25rem) {
   #projects .projects-inner {
-    height: 70rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 39.9375rem) {
+  #projects .projects-inner {
+    padding: 0px 100px;
   }
 }
 #projects .projects-inner::before {
-  content: "03.";
+  content: "04.";
   font-family: "PT Mono", monospace;
   position: absolute;
   bottom: 0;
@@ -1855,74 +1863,68 @@ a, :visited, :hover {
 }
 #projects .projects-inner .projects-top {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  padding: 0% 10% 20px 10%;
+  width: 45rem;
+  height: 25rem;
+  margin-left: 1%;
 }
-@media (max-width: 56.25rem) {
+@media (max-width: 39.9375rem) {
   #projects .projects-inner .projects-top {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 #projects .projects-inner .projects-top .project-top-image {
-  flex: 1;
+  background-image: url(/assests/kizuki.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 19px;
+  width: 45rem;
+  height: 25rem;
+  filter: grayscale(1) brightness(60%);
 }
 @media (max-width: 56.25rem) {
   #projects .projects-inner .projects-top .project-top-image {
-    flex: 2;
+    filter: grayscale(90%) contrast(1) brightness(30%) blur(1px);
   }
 }
-@media (max-width: 56.25rem) {
+@media (max-width: 39.9375rem) {
   #projects .projects-inner .projects-top .project-top-image {
-    width: 100%;
-    margin-left: -30%;
+    width: 35rem;
+    height: 21rem;
   }
 }
-#projects .projects-inner .projects-top .project-top-image img {
-  width: 85%;
-  filter: grayscale(1);
-}
-@media (max-width: 97.5rem) {
-  #projects .projects-inner .projects-top .project-top-image img {
-    width: 100%;
-  }
-}
-#projects .projects-inner .projects-top .project-top-image img:hover {
+#projects .projects-inner .projects-top .project-top-image:hover {
   filter: grayscale(0);
+  background-size: 103% 103%;
 }
 #projects .projects-inner .projects-top .project-top-image-content {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   flex-direction: column;
-  z-index: 1;
-  flex: 1;
-  left: -15%;
-  position: relative;
+  position: absolute;
+  width: 32rem;
+  right: 25%;
 }
-@media (max-width: 56.25rem) {
+@media (max-width: 97.5rem) {
   #projects .projects-inner .projects-top .project-top-image-content {
-    flex: 0;
+    right: 30%;
   }
 }
 @media (max-width: 56.25rem) {
   #projects .projects-inner .projects-top .project-top-image-content {
-    flex: 0;
-    margin-top: -50%;
-    width: 83%;
-    margin-right: -70%;
+    right: 20%;
   }
 }
 @media (max-width: 39.9375rem) {
   #projects .projects-inner .projects-top .project-top-image-content {
-    flex: 0;
-    margin-top: -50%;
-    width: 120%;
-    margin-right: -35%;
+    right: 5%;
   }
 }
 #projects .projects-inner .projects-top .project-top-image-content .project-name {
@@ -1945,6 +1947,11 @@ a, :visited, :hover {
   padding: 20px 50px;
   background-color: #000000;
 }
+@media (max-width: 39.9375rem) {
+  #projects .projects-inner .projects-top .project-top-image-content .project-info {
+    padding: 10px 30px;
+  }
+}
 #projects .projects-inner .projects-top .project-top-image-content .project-files {
   display: flex;
   justify-content: flex-end;
@@ -1963,71 +1970,97 @@ a, :visited, :hover {
 }
 #projects .projects-inner .projects-bottom {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  flex-direction: row-reverse;
-  padding: 0% 10% 20px 10%;
+  flex-direction: row;
+  position: relative;
+  right: 0;
+  width: 100%;
 }
 @media (max-width: 56.25rem) {
   #projects .projects-inner .projects-bottom {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    left: 0;
+    width: 45rem;
+    height: 25rem;
+  }
+}
+@media (max-width: 39.9375rem) {
+  #projects .projects-inner .projects-bottom {
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row-reverse;
   }
 }
 #projects .projects-inner .projects-bottom .project-bottom-image {
-  flex: 1;
+  background-image: url(/assests/easybank.png);
+  width: 45rem;
+  height: 25rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 19px;
   position: relative;
-  right: 7.4%;
+  filter: grayscale(100%) brightness(35%);
+}
+@media (max-width: 64rem) {
+  #projects .projects-inner .projects-bottom .project-bottom-image {
+    filter: grayscale(150%) contrast(1) brightness(30%) blur(1px);
+  }
 }
 @media (max-width: 56.25rem) {
   #projects .projects-inner .projects-bottom .project-bottom-image {
-    flex: 2;
-    right: 0;
+    filter: grayscale(100%) contrast(1) brightness(10%) blur(1px);
   }
 }
-@media (max-width: 56.25rem) {
+@media (max-width: 39.9375rem) {
   #projects .projects-inner .projects-bottom .project-bottom-image {
-    width: 100%;
-    margin-right: -30%;
+    width: 35rem;
+    height: 21rem;
   }
 }
-#projects .projects-inner .projects-bottom .project-bottom-image img {
-  width: 85%;
-  filter: grayscale(1);
+#projects .projects-inner .projects-bottom .project-bottom-image:hover + ::before {
+  background-color: rgba(0, 0, 0, 0);
 }
-@media (max-width: 97.5rem) {
-  #projects .projects-inner .projects-bottom .project-bottom-image img {
-    width: 100%;
-  }
-}
-#projects .projects-inner .projects-bottom .project-bottom-image img:hover {
+#projects .projects-inner .projects-bottom .project-bottom-image:hover {
   filter: grayscale(0);
+  background-image: url(/assests/Easybank.png);
+  background-size: 103% 103%;
+  filter: brightness(0.9);
+}
+@media (max-width: 1553px), (min-width: 1361) {
+  #projects .projects-inner .projects-bottom .project-bottom-image {
+    margin-right: 10%;
+  }
+}
+@media (max-width: 56.25rem) {
+  #projects .projects-inner .projects-bottom .project-bottom-image {
+    margin-right: 0%;
+  }
 }
 #projects .projects-inner .projects-bottom .project-bottom-image-content {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  position: absolute;
   z-index: 1;
-  flex: 1;
-  position: relative;
+  width: 32rem;
+  left: 19%;
 }
-@media (max-width: 56.25rem) {
+@media (max-width: 97.5rem) {
   #projects .projects-inner .projects-bottom .project-bottom-image-content {
-    flex: 0;
-    margin-top: -50%;
-    width: 83%;
-    margin-left: -40%;
+    left: 19%;
   }
 }
-@media (max-width: 56.25rem) {
+@media (max-width: 39.9375rem) {
   #projects .projects-inner .projects-bottom .project-bottom-image-content {
-    flex: 0;
-    margin-top: -50%;
-    width: 120%;
-    margin-left: 0%;
+    left: 10%;
+    padding-left: 30px;
   }
 }
 #projects .projects-inner .projects-bottom .project-bottom-image-content .project-name {
@@ -2050,10 +2083,15 @@ a, :visited, :hover {
   padding: 20px 50px;
   background-color: #000000;
 }
+@media (max-width: 39.9375rem) {
+  #projects .projects-inner .projects-bottom .project-bottom-image-content .project-info {
+    padding: 10px 30px;
+  }
+}
 #projects .projects-inner .projects-bottom .project-bottom-image-content .project-files {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: flex-end;
+  align-items: flex-end;
   flex-direction: row;
   gap: 10px;
   height: 2.5rem;
@@ -2081,6 +2119,11 @@ a, :visited, :hover {
   background-position-x: left;
   background-repeat: no-repeat;
   transition: background-size 500ms;
+}
+@media (max-width: 56.25rem) {
+  #projects .projects-inner .projects-text {
+    right: 5.7%;
+  }
 }
 #projects .projects-inner .projects-text:hover {
   background-size: 100% 100%;
