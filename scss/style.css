@@ -351,7 +351,7 @@ a, :visited, :hover {
 }
 .hamburger .bars {
   border-radius: 5%;
-  background-color: #04d7df;
+  background-color: #08c5cc;
   height: 2px;
   width: inherit;
   margin-bottom: 6px;
@@ -1935,7 +1935,7 @@ a, :visited, :hover {
   font-size: 3.4rem;
   margin-bottom: 10px;
   font-weight: 600;
-  color: #00f4ff;
+  color: #08c5cc;
   line-height: 0.9;
 }
 #projects .projects-inner .projects-top .project-top-image-content .project-info {
@@ -1945,7 +1945,7 @@ a, :visited, :hover {
   text-align: justify;
   text-indent: 0.7px;
   padding: 20px 50px;
-  background-color: #000000;
+  background-color: #0e0e0e;
 }
 @media (max-width: 39.9375rem) {
   #projects .projects-inner .projects-top .project-top-image-content .project-info {
@@ -1970,51 +1970,34 @@ a, :visited, :hover {
 }
 #projects .projects-inner .projects-bottom {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  position: relative;
-  right: 0;
-  width: 100%;
-}
-@media (max-width: 56.25rem) {
-  #projects .projects-inner .projects-bottom {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    left: 0;
-    width: 45rem;
-    height: 25rem;
-  }
+  width: 45rem;
+  height: 25rem;
+  margin-left: 1%;
 }
 @media (max-width: 39.9375rem) {
   #projects .projects-inner .projects-bottom {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
 }
 #projects .projects-inner .projects-bottom .project-bottom-image {
-  background-image: url(/assests/easybank.png);
-  width: 45rem;
-  height: 25rem;
+  background-image: url(/assests/Easybank.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 19px;
-  position: relative;
-  filter: grayscale(100%) brightness(35%);
-}
-@media (max-width: 64rem) {
-  #projects .projects-inner .projects-bottom .project-bottom-image {
-    filter: grayscale(150%) contrast(1) brightness(30%) blur(1px);
-  }
+  width: 45rem;
+  height: 25rem;
+  filter: grayscale(1) brightness(60%);
 }
 @media (max-width: 56.25rem) {
   #projects .projects-inner .projects-bottom .project-bottom-image {
-    filter: grayscale(100%) contrast(1) brightness(10%) blur(1px);
+    filter: grayscale(90%) contrast(1) brightness(30%) blur(1px);
   }
 }
 @media (max-width: 39.9375rem) {
@@ -2023,44 +2006,32 @@ a, :visited, :hover {
     height: 21rem;
   }
 }
-#projects .projects-inner .projects-bottom .project-bottom-image:hover + ::before {
-  background-color: rgba(0, 0, 0, 0);
-}
 #projects .projects-inner .projects-bottom .project-bottom-image:hover {
   filter: grayscale(0);
-  background-image: url(/assests/Easybank.png);
   background-size: 103% 103%;
-  filter: brightness(0.9);
-}
-@media (max-width: 1553px), (min-width: 1361) {
-  #projects .projects-inner .projects-bottom .project-bottom-image {
-    margin-right: 10%;
-  }
-}
-@media (max-width: 56.25rem) {
-  #projects .projects-inner .projects-bottom .project-bottom-image {
-    margin-right: 0%;
-  }
 }
 #projects .projects-inner .projects-bottom .project-bottom-image-content {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-end;
   flex-direction: column;
   position: absolute;
-  z-index: 1;
   width: 32rem;
-  left: 19%;
+  right: 25%;
 }
 @media (max-width: 97.5rem) {
   #projects .projects-inner .projects-bottom .project-bottom-image-content {
-    left: 19%;
+    right: 30%;
+  }
+}
+@media (max-width: 56.25rem) {
+  #projects .projects-inner .projects-bottom .project-bottom-image-content {
+    right: 20%;
   }
 }
 @media (max-width: 39.9375rem) {
   #projects .projects-inner .projects-bottom .project-bottom-image-content {
-    left: 10%;
-    padding-left: 30px;
+    right: 5%;
   }
 }
 #projects .projects-inner .projects-bottom .project-bottom-image-content .project-name {
@@ -2071,7 +2042,7 @@ a, :visited, :hover {
   font-size: 3.4rem;
   margin-bottom: 10px;
   font-weight: 600;
-  color: #00f4ff;
+  color: #08c5cc;
   line-height: 0.9;
 }
 #projects .projects-inner .projects-bottom .project-bottom-image-content .project-info {
@@ -2081,7 +2052,7 @@ a, :visited, :hover {
   text-align: justify;
   text-indent: 0.7px;
   padding: 20px 50px;
-  background-color: #000000;
+  background-color: #0e0e0e;
 }
 @media (max-width: 39.9375rem) {
   #projects .projects-inner .projects-bottom .project-bottom-image-content .project-info {
