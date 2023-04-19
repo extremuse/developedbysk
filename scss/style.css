@@ -1910,16 +1910,21 @@ a, :visited, :hover {
   flex-direction: column;
   position: absolute;
   width: 32rem;
-  right: 25%;
+  right: 16%;
 }
 @media (max-width: 97.5rem) {
   #projects .projects-inner .projects-top .project-top-image-content {
-    right: 30%;
+    right: 22%;
+  }
+}
+@media (max-width: 64rem) {
+  #projects .projects-inner .projects-top .project-top-image-content {
+    right: 10%;
   }
 }
 @media (max-width: 56.25rem) {
   #projects .projects-inner .projects-top .project-top-image-content {
-    right: 20%;
+    right: 10%;
   }
 }
 @media (max-width: 39.9375rem) {
@@ -2017,16 +2022,21 @@ a, :visited, :hover {
   flex-direction: column;
   position: absolute;
   width: 32rem;
-  right: 25%;
+  right: 16%;
 }
 @media (max-width: 97.5rem) {
   #projects .projects-inner .projects-bottom .project-bottom-image-content {
-    right: 30%;
+    right: 22%;
+  }
+}
+@media (max-width: 64rem) {
+  #projects .projects-inner .projects-bottom .project-bottom-image-content {
+    right: 10%;
   }
 }
 @media (max-width: 56.25rem) {
   #projects .projects-inner .projects-bottom .project-bottom-image-content {
-    right: 20%;
+    right: 10%;
   }
 }
 @media (max-width: 39.9375rem) {

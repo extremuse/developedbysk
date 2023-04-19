@@ -64,12 +64,15 @@
                 @include flex(center,flex-end,column);
                 position: absolute;
                 width: 32rem;
-                right: 25%;
+                right: 16%;
                 @include breakpoint-down(xlarge){
-                    right: 30%;
+                    right: 22%;
+                }
+                @include breakpoint-down(medium){
+                    right: 10%;
                 }
                 @include breakpoint-down(tablet){
-                    right: 20%;
+                    right: 10%;
                 }
                 @include breakpoint-down(small){
                     right: 05%;
@@ -149,17 +152,19 @@
                 @include flex(center,flex-end,column);
                 position: absolute;
                 width: 32rem;
-                right: 25%;
+                right: 16%;
                 @include breakpoint-down(xlarge){
-                    right: 30%;
+                    right: 22%;
+                }
+                @include breakpoint-down(medium){
+                    right: 10%;
                 }
                 @include breakpoint-down(tablet){
-                    right: 20%;
+                    right: 10%;
                 }
                 @include breakpoint-down(small){
                     right: 05%;
-                }
-                // @include breakpoint-down(xlarge){
+                }              // @include breakpoint-down(xlarge){
                     //     right: 10%;
                 // }
                 
