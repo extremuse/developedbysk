@@ -2,42 +2,75 @@
     width: 100vw;
     height:100vh;
     .projects-inner{
-        height: inherit;
-        max-width:1580px;
+        height:71rem;
+        max-width:1570px;
+        position: relative;
         margin:auto;
-        padding: 50px 0px;
+        padding: 50px 20px;
+        @include flex(center,center,column);
+
+        &::before{
+            content: "03.";
+            font-family: 'PT Mono', monospace;
+            position: absolute;
+            bottom: 0;
+            left: 1%;
+            color: $fontGrey;
+            font-size: 3rem;
+            @include breakpoint-down(tablet){
+            display: none;
+            }
+        }
         .projects-top{
             @include flex(center,center,row);
-            padding-bottom: 20px;
+            padding: 0% 10% 20px 10%;
             .project-top-image{
-                width: 600px;                
+                flex: 1;                         
+                @include breakpoint-down(tablet){
+                    flex: 2;
+                }
                 img{
-                    width: 100%;
+                    width: 85%;
+                    @include breakpoint-down(xlarge){
+                        width: 100%;
+                    }
+                    filter: grayscale(1);
+                    &:hover{
+                        filter: grayscale(0);
+                    }
                 }
             }
             .project-top-image-content{
-                @include flex(center,center,column);
-                margin-left: -3%;
+                @include flex(center,flex-end,column);
+                z-index: 1;
+                flex: 1;
+                left: -15%;
+                position: relative;
+                @include breakpoint-down(tablet){
+                    flex: 0;
+
+                }
+
+
                 .project-name{
-                    width:510px;
                     @include flex(center,flex-end,column);
                     font-size: 3.4rem;
+                    margin-bottom: 10px;
                     font-weight: 600;
                     color: $globalColor;
                     line-height: 0.9;
                 }
                 .project-info{
-                    border-radius: 24px;
-                    color: $fontGrey;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                    color: $fontGrey2;
                     text-align: justify;
-                    width: 510px;
                     text-indent: 0.7px;
                     padding: 20px 50px ;
-                    background-color: $backgroundColor2;
+                    background-color: $black;
                 }
                 .project-files{
                     @include flex(flex-end,flex-end,row);
-                    width: 510px;
                     gap: 10px;
                     height: 2.5rem;
                     .project-files-github-btn{
@@ -53,37 +86,59 @@
         }
         .projects-bottom{
             @include flex(center,center,row-reverse);
-            gap: 10px;
+            padding: 0% 10% 20px 10%;
+            @include breakpoint-down(tablet){
+                @include flex(center,center,column);
+                
+                
+            }
             .project-bottom-image{
-                width: 600px;                
+                flex: 1;                         
+                position: relative;
+                right: 7.4%;
+                @include breakpoint-down(tablet){
+                    flex: 2;
+                    right: 0;
+                }
                 img{
-                    width: 100%;
+                    width: 85%;
+                    @include breakpoint-down(xlarge){
+                        width: 100%;
+                    }
+                    filter: grayscale(1);
+                    &:hover{
+                        filter: grayscale(0);
+                    }
                 }
             }
             .project-bottom-image-content{
-                @include flex(center,center,column);
-                margin-right: -3%;
-                z-index: 999;
+                @include flex(center,flex-start,column);
+                z-index: 1;
+                flex: 1;
+                position: relative;
+                @include breakpoint-down(tablet){
+                    flex: 0;
+
+                }
                 .project-name{
-                    width:510px;
-                    @include flex(center,flex-start,column);
+                    @include flex(center,flex-end,column);
                     font-size: 3.4rem;
+                    margin-bottom: 10px;
                     font-weight: 600;
                     color: $globalColor;
                     line-height: 0.9;
                 }
                 .project-info{
-                    border-radius: 24px;
-                    color: $fontGrey;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                    color: $fontGrey2;
                     text-align: justify;
-                    width: 510px;
                     text-indent: 0.7px;
                     padding: 20px 50px ;
-                    background-color: $backgroundColor2;
+                    background-color: $black;
                 }
                 .project-files{
                     @include flex(flex-start,flex-start,row);
-                    width: 510px;
                     gap: 10px;
                     height: 2.5rem;
                     .project-files-github-btn{
@@ -95,6 +150,22 @@
                         height: 2rem;
                     }
                 }
+            }
+        }
+        .projects-text{
+            font-size: 3.5rem;
+            letter-spacing: -2px;
+            word-spacing: 0px;
+            position:absolute;
+            bottom: 0;
+            right: 10.7%;
+            flex: 0;
+            //font-family: 'PT Mono', monospace;
+            font-weight: 600;
+            color: $fontGrey2;
+            @include hover(15% 100%);
+            &:hover{
+                background-size: 100% 100%
             }
         }
     }
