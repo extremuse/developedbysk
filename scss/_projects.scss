@@ -6,7 +6,7 @@
         max-width:1570px;
         position: relative;
         margin:auto;
-        padding: 80px 7%;
+        padding: 80px 15%;
         @include flex(center,flex-start,column);
         gap: 80px;
         @include breakpoint-down(tablet){
