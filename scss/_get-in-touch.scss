@@ -11,6 +11,7 @@
     }
     @include breakpoint-down(small){
         background-size: 65% 28%;
+        height: 61rem;
     }
     .get-in-touch-inner{
         gap: 40px;
@@ -21,8 +22,8 @@
         padding: 100px 20px;
         position: relative;
         @include breakpoint-down(small){
-            gap: 10px;
-            padding-top: 40px;
+            gap: 30px;
+            padding-top: 100px;
         }
         &::before{
             content: "05.";

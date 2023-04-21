@@ -1828,6 +1828,7 @@ a, :visited, :hover {
   position: relative;
   margin: auto;
   padding: 80px 15%;
+  margin-bottom: 15px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -2174,6 +2175,7 @@ a, :visited, :hover {
 @media (max-width: 39.9375rem) {
   #get-in-touch {
     background-size: 65% 28%;
+    height: 61rem;
   }
 }
 #get-in-touch .get-in-touch-inner {
@@ -2190,8 +2192,8 @@ a, :visited, :hover {
 }
 @media (max-width: 39.9375rem) {
   #get-in-touch .get-in-touch-inner {
-    gap: 10px;
-    padding-top: 40px;
+    gap: 30px;
+    padding-top: 100px;
   }
 }
 #get-in-touch .get-in-touch-inner::before {
