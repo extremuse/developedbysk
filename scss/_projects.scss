@@ -10,6 +10,7 @@
         @include flex(center,flex-start,column);
         gap: 80px;
         @include breakpoint-down(tablet){
+            height:84rem;
             @include flex(center,center,column);
         }
         @include breakpoint-down(small){
@@ -32,6 +33,10 @@
             @include flex(flex-start,center,row);
             width: 45rem;
             height: 25rem;
+            @include breakpoint-down(tablet){
+                @include flex(center,center,column);
+                
+            }
             @include breakpoint-down(small){
                 @include flex(center,center,row);
                 
@@ -49,6 +54,7 @@
                 // background-color: aqua;
                 @include breakpoint-down(tablet){
                     filter:grayscale(90%) contrast(1) brightness(30%) blur(1px);
+                    position: absolute;
                 }
                 @include breakpoint-down(small){
                     width: 35rem;
@@ -71,10 +77,14 @@
                     right: 10%;
                 }
                 @include breakpoint-down(tablet){
-                    right: 10%;
+                    left:center;
+                    position: relative;
+                    left: 0;
+                    // top:-22rem;
+
                 }
                 @include breakpoint-down(small){
-                    right: 05%;
+                    right: 0%;
                 }
                 // @include breakpoint-down(xlarge){
                     //     right: 10%;
@@ -117,8 +127,8 @@
         }
         .projects-bottom{
             @include flex(flex-start,center,row);
-            @include breakpoint-down(small){
-                @include flex(center,center,row);
+            @include breakpoint-down(tablet){
+                @include flex(center,center,column);
                 
             }
             .project-bottom-image{   
@@ -148,18 +158,22 @@
                 width: 32rem;
                 left: 16%;
                 @include breakpoint-down(tablet){
-                        left: 9%
-                    }
-                @include breakpoint-down(small){
-                        left: 5%
-                    }
+                    left:center;
+                    position: relative;
+                    left: 0;
+                    top:-22rem;
 
-                    .project-name{
-                        @include flex(center,flex-end,column);
-                        font-size: 3.4rem;
-                        margin-bottom: 10px;
-                        font-weight: 600;
-                        color: $globalColorSecond;
+                }
+                @include breakpoint-down(small){
+                    top: -19rem
+                }
+                
+                .project-name{
+                    @include flex(center,flex-end,column);
+                    font-size: 3.4rem;
+                    margin-bottom: 10px;
+                    font-weight: 600;
+                    color: $globalColorSecond;
                     line-height: 0.9;
                 }
                 .project-info{
