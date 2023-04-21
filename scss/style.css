@@ -2056,6 +2056,11 @@ a, :visited, :hover {
   color: #08c5cc;
   line-height: 0.9;
 }
+@media (max-width: 39.9375rem) {
+  #projects .projects-inner .projects-bottom .project-bottom-image-content .project-name {
+    font-weight: bold;
+  }
+}
 #projects .projects-inner .projects-bottom .project-bottom-image-content .project-info {
   border-radius: 10px;
   margin-bottom: 10px;

@@ -175,6 +175,9 @@
                     font-weight: 600;
                     color: $globalColorSecond;
                     line-height: 0.9;
+                    @include breakpoint-down(small){
+                        font-weight: bold; 
+                    }                    
                 }
                 .project-info{
                     border-radius: 10px;
