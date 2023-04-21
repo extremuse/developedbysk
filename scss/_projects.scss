@@ -32,7 +32,6 @@
             @include flex(flex-start,center,row);
             width: 45rem;
             height: 25rem;
-            margin-left: 1%;
             @include breakpoint-down(small){
                 @include flex(center,center,row);
                 
@@ -118,9 +117,6 @@
         }
         .projects-bottom{
             @include flex(flex-start,center,row);
-            width: 45rem;
-            height: 25rem;
-            margin-left: 1%;
             @include breakpoint-down(small){
                 @include flex(center,center,row);
                 
@@ -133,11 +129,9 @@
                 border-radius: 19px;
                 width: 45rem;
                 height: 25rem;
-                filter: grayscale(1) brightness(60%);
-                
-                // background-color: aqua;
+                filter: grayscale(100%) brightness(50%);
                 @include breakpoint-down(tablet){
-                    filter:grayscale(90%) contrast(1) brightness(30%) blur(1px);
+                    filter:grayscale(100%) contrast(1) brightness(10%) blur(2px);
                 }
                 @include breakpoint-down(small){
                     width: 35rem;
@@ -149,31 +143,23 @@
                 }
             }
             .project-bottom-image-content{
-                @include flex(center,flex-end,column);
+                @include flex(center,flex-start,column);
                 position: absolute;
                 width: 32rem;
-                right: 16%;
-                @include breakpoint-down(xlarge){
-                    right: 22%;
-                }
-                @include breakpoint-down(medium){
-                    right: 10%;
-                }
+                left: 16%;
                 @include breakpoint-down(tablet){
-                    right: 10%;
-                }
+                        left: 9%
+                    }
                 @include breakpoint-down(small){
-                    right: 05%;
-                }              // @include breakpoint-down(xlarge){
-                    //     right: 10%;
-                // }
-                
-                .project-name{
-                    @include flex(center,flex-end,column);
-                    font-size: 3.4rem;
-                    margin-bottom: 10px;
-                    font-weight: 600;
-                    color: $globalColorSecond;
+                        left: 5%
+                    }
+
+                    .project-name{
+                        @include flex(center,flex-end,column);
+                        font-size: 3.4rem;
+                        margin-bottom: 10px;
+                        font-weight: 600;
+                        color: $globalColorSecond;
                     line-height: 0.9;
                 }
                 .project-info{
@@ -203,109 +189,6 @@
                 }
             }
         }
-        // .projects-bottom{
-        //     @include flex(flex-end,center,row);
-        //     position: relative;
-        //     right: 0;
-        //     width: 100%;
-        //     @include breakpoint-down(tablet){
-        //         @include flex(flex-start,center,row);
-        //         left: 0;
-        //         width: 45rem;
-        //         height: 25rem;
-                
-        //     }
-        //     @include breakpoint-down(small){
-        //         @include flex(center,center,row-reverse);
-        //     }
-        //     .project-bottom-image{   
-        //         background-image: url(/assests/easybank.png);
-        //         width: 45rem;
-        //         height: 25rem;
-        //         background-size: 100% 100%;
-        //         background-repeat: no-repeat;
-        //         background-position: center;
-        //         border-radius: 19px;
-        //         position: relative;
-        //         filter: grayscale(100%) brightness(35%);
-        //         @include breakpoint-down(medium){
-        //             filter:grayscale(150%) contrast(1) brightness(30%) blur(1px);
-        //         }
-        //         @include breakpoint-down(tablet){
-        //             filter:grayscale(100%) contrast(1) brightness(10%) blur(1px);
-        //         }
-        //         @include breakpoint-down(small){
-        //             width: 35rem;
-        //             height: 21rem;
-        //         }      
-
-        //         &:hover + ::before{
-        //             background-color: rgb(0,0,0,0);
-                    
-        //         }
-        //         // background-color: aqua;                    
-        //         &:hover{
-        //             filter: grayscale(0);
-        //             background-image: url(/assests/Easybank.png);
-        //             background-size: 103% 103%;
-        //             filter: brightness(0.9);
-        //         }
-        //         @media  (max-width:1553px) , (min-width:1361) {
-        //             margin-right: 10%;
-        //         }
-        //         @include breakpoint-down(tablet){
-        //             margin-right: 0%
-        //         }
-        //     }
-        //     .project-bottom-image-content{
-        //         @include flex(center,flex-start,column);
-        //         position: absolute;
-        //         z-index: 1;
-        //         width: 32rem;
-        //         left: 19%;
-        //         @include breakpoint-down(xlarge){
-        //             left: 19%;
-        //         }
-        //         @include breakpoint-down(small){
-        //             left: 10%;
-        //             padding-left:30px; 
-        //         }
-                
-        //         .project-name{
-        //             @include flex(center,flex-end,column);
-        //             font-size: 3.4rem;
-        //             margin-bottom: 10px;
-        //             font-weight: 600;
-        //             color: $globalColorSecond;
-        //             line-height: 0.9;
-        //         }
-        //         .project-info{
-        //             border-radius: 10px;
-        //             margin-bottom: 10px;
-        //             color: $fontGrey2;
-        //             text-align: justify;
-        //             text-indent: 0.7px;
-        //             padding: 20px 50px ;
-        //             background-color: $backgroundColor3;
-        //             @include breakpoint-down(small){
-        //                 padding: 10px 30px; 
-        //             }      
-        //         }
-        //         .project-files{
-        //             @include flex(flex-end,flex-end,row);
-        //             gap: 10px;
-        //             height: 2.5rem;
-        //             .project-files-github-btn{
-        //                 width: 2rem;
-        //                 height: 2rem;
-        //             }
-        //             .project-files-site-btn{
-        //                 width: 2rem;
-        //                 height: 2rem;
-        //             }
-        //         }
-        //     }
-        // }
         .projects-text{
             font-size: 3.5rem;
             letter-spacing: -2px;
@@ -325,5 +208,22 @@
                 background-size: 100% 100%
             }
         }
+    }
+}
+.projects-bottom-main{
+    width: 100%;
+    @include flex(flex-end,center,row);
+    @include breakpoint-down(xlarge){
+        width: 90%;
+    }
+    @include breakpoint-down (medium){
+        width: 108%;
+    }
+    @include breakpoint-down (tablet){
+        width: 100%;
+        @include flex(center,center,row);
+    }
+    @include breakpoint-down (small){
+        width: 100%;
     }
 }

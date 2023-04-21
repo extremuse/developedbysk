@@ -8,7 +8,7 @@ html {
     font-size: 90%;
   }
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   html {
     font-size: 80%;
   }
@@ -120,7 +120,7 @@ a, :visited, :hover {
   right: 0;
   overflow: hidden;
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   .navbar .logo a .logo-sachin {
     line-height: 1;
   }
@@ -387,7 +387,7 @@ a, :visited, :hover {
   align-items: center;
   flex-direction: row;
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   .home-content-image {
     height: 59rem;
   }
@@ -419,7 +419,7 @@ a, :visited, :hover {
   height: inherit;
   position: relative;
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   .home-content-image .content-left {
     flex: 1;
   }
@@ -457,7 +457,7 @@ a, :visited, :hover {
   width: 100%;
   font-family: "Noto Serif KR", serif;
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   .home-content-image .content-left .introduce-name {
     font-size: 2rem;
   }
@@ -484,7 +484,7 @@ a, :visited, :hover {
   font-family: "Noto Serif KR", serif;
   font-weight: 500;
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   .home-content-image .content-left .introduce-name .span-sachinKumar {
     font-size: 3.1rem;
   }
@@ -652,7 +652,7 @@ a, :visited, :hover {
     background-position: 10% 100%;
   }
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   .home-content-image .my-image-left {
     flex: 1;
   }
@@ -829,7 +829,7 @@ a, :visited, :hover {
 .home-content-image .my-image-left .my-image img {
   width: 540px;
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   .home-content-image .my-image-left .my-image img {
     width: 480px;
   }
@@ -978,7 +978,7 @@ a, :visited, :hover {
     display: none;
   }
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   #about-me .about-me-inner .about-me-content-left {
     flex: 1.5;
   }
@@ -1107,7 +1107,7 @@ a, :visited, :hover {
   height: 65rem;
   position: relative;
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   #about-me .about-me-inner .about-me-content-right {
     padding-top: 22%;
   }
@@ -1158,7 +1158,7 @@ a, :visited, :hover {
     width: 240px;
   }
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   #about-me .about-me-inner .about-me-content-right .about:nth-child(1) {
     padding-right: 0%;
   }
@@ -1203,7 +1203,7 @@ a, :visited, :hover {
     width: 350px;
   }
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   #about-me .about-me-inner .about-me-content-right .about:nth-child(2) {
     padding-left: 0%;
   }
@@ -1247,7 +1247,7 @@ a, :visited, :hover {
     width: 350px;
   }
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   #about-me .about-me-inner .about-me-content-right .about:nth-child(3) {
     padding-right: 0%;
   }
@@ -1508,7 +1508,7 @@ a, :visited, :hover {
   align-items: flex-end;
   flex-direction: column;
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   #my-skills .my-skills-right {
     flex: 1.3;
     padding-left: 7%;
@@ -1609,7 +1609,7 @@ a, :visited, :hover {
   right: -10px;
   width: 100%;
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   #my-skills .my-skills-right .ellipse {
     right: -80px;
   }
@@ -1651,7 +1651,7 @@ a, :visited, :hover {
 #my-skills .my-skills-right .ellipse .ellipse-first img {
   width: 90%;
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   #my-skills .my-skills-right .ellipse .ellipse-first img {
     width: 72%;
   }
@@ -1680,7 +1680,7 @@ a, :visited, :hover {
 #my-skills .my-skills-right .ellipse .ellipse-second img {
   width: 80%;
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   #my-skills .my-skills-right .ellipse .ellipse-second img {
     width: 65%;
   }
@@ -1709,7 +1709,7 @@ a, :visited, :hover {
 #my-skills .my-skills-right .ellipse .ellipse-third img {
   width: 40%;
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   #my-skills .my-skills-right .ellipse .ellipse-third img {
     width: 30%;
   }
@@ -1731,7 +1731,7 @@ a, :visited, :hover {
   right: 38px;
   height: 70px;
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   #my-skills .my-skills-right .ellipse .ellipse-fourth {
     right: 90px;
   }
@@ -1753,7 +1753,7 @@ a, :visited, :hover {
 #my-skills .my-skills-right .ellipse .ellipse-fourth img {
   width: 100%;
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   #my-skills .my-skills-right .ellipse .ellipse-fourth img {
     width: 90%;
   }
@@ -1868,7 +1868,6 @@ a, :visited, :hover {
   flex-direction: row;
   width: 45rem;
   height: 25rem;
-  margin-left: 1%;
 }
 @media (max-width: 39.9375rem) {
   #projects .projects-inner .projects-top {
@@ -1912,7 +1911,7 @@ a, :visited, :hover {
   width: 32rem;
   right: 16%;
 }
-@media (max-width: 97.5rem) {
+@media (max-width: 98rem) {
   #projects .projects-inner .projects-top .project-top-image-content {
     right: 22%;
   }
@@ -1978,9 +1977,6 @@ a, :visited, :hover {
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  width: 45rem;
-  height: 25rem;
-  margin-left: 1%;
 }
 @media (max-width: 39.9375rem) {
   #projects .projects-inner .projects-bottom {
@@ -1998,11 +1994,11 @@ a, :visited, :hover {
   border-radius: 19px;
   width: 45rem;
   height: 25rem;
-  filter: grayscale(1) brightness(60%);
+  filter: grayscale(100%) brightness(50%);
 }
 @media (max-width: 56.25rem) {
   #projects .projects-inner .projects-bottom .project-bottom-image {
-    filter: grayscale(90%) contrast(1) brightness(30%) blur(1px);
+    filter: grayscale(100%) contrast(1) brightness(10%) blur(2px);
   }
 }
 @media (max-width: 39.9375rem) {
@@ -2018,30 +2014,20 @@ a, :visited, :hover {
 #projects .projects-inner .projects-bottom .project-bottom-image-content {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   flex-direction: column;
   position: absolute;
   width: 32rem;
-  right: 16%;
-}
-@media (max-width: 97.5rem) {
-  #projects .projects-inner .projects-bottom .project-bottom-image-content {
-    right: 22%;
-  }
-}
-@media (max-width: 64rem) {
-  #projects .projects-inner .projects-bottom .project-bottom-image-content {
-    right: 10%;
-  }
+  left: 16%;
 }
 @media (max-width: 56.25rem) {
   #projects .projects-inner .projects-bottom .project-bottom-image-content {
-    right: 10%;
+    left: 9%;
   }
 }
 @media (max-width: 39.9375rem) {
   #projects .projects-inner .projects-bottom .project-bottom-image-content {
-    right: 5%;
+    left: 5%;
   }
 }
 #projects .projects-inner .projects-bottom .project-bottom-image-content .project-name {
@@ -2108,4 +2094,36 @@ a, :visited, :hover {
 }
 #projects .projects-inner .projects-text:hover {
   background-size: 100% 100%;
+}
+
+.projects-bottom-main {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+@media (max-width: 98rem) {
+  .projects-bottom-main {
+    width: 90%;
+  }
+}
+@media (max-width: 64rem) {
+  .projects-bottom-main {
+    width: 108%;
+  }
+}
+@media (max-width: 56.25rem) {
+  .projects-bottom-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+@media (max-width: 39.9375rem) {
+  .projects-bottom-main {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
