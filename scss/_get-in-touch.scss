@@ -1,0 +1,105 @@
+#get-in-touch{
+    width: 100vw;
+    height:41rem;
+    background-image:url(/assests/get_in_touch_BG.png);
+    background-color: $backgroundColor2;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 60% 65%;
+    @include breakpoint-down(tablet){
+        background-size: 60% 45%;
+    }
+    @include breakpoint-down(small){
+        background-size: 60% 35%;
+    }
+    .get-in-touch-inner{
+        gap: 40px;
+        max-width: 1580px;
+        height: inherit;
+        margin: auto;
+        @include flex(flex-start,center,column);
+        padding: 100px 20px;
+        position: relative;
+        @include breakpoint-down(small){
+            gap: 10px;
+            padding-top: 40px;
+        }
+        &::before{
+            content: "05.";
+            font-family: 'PT Mono', monospace;
+            position: absolute;
+            bottom: 19px;
+            left: 1%;
+            color: $fontGrey;
+            font-size: 3rem;
+            z-index: 3;
+            @include breakpoint-down(tablet){
+                display: none;
+            }
+        }
+        .content{
+            font-size:1.2rem;
+            width: 70%;
+            text-align: center;
+            @include breakpoint-down(tablet){
+                width: 100%
+            }
+        }
+        .social-icons{
+            @include flex(center ,center,row);
+            @include breakpoint-down(small){
+                @include flex(center ,center,column);
+                gap: 10px;
+                margin-top: 10px;               
+            }
+            .icons{
+                color: $white;
+                width: 10rem;
+                text-align: center;
+                border-radius: 10px;
+                background-color: none;
+                // border: 2px solid $globalColor;
+                backdrop-filter:blur(10px);
+                padding: 11px 15px;
+                background: rgba(153, 153, 153, 0.5);
+                margin-left: 12px;
+                font-weight: 200;
+                font-family: Roboto Mono,monospace;
+                &:hover{
+                    background: rgb(255, 255, 255);
+                }
+                &:hover a{
+                    color: $black;
+                }
+                a{
+                    // color: $black;
+                    color: $white;
+                    
+                }
+            }
+            .designed-by-sk{
+            font-family: Roboto Mono,monospace;
+        }
+    }
+    .projects-text{
+        font-size: 3rem;
+        letter-spacing: -2px;
+        word-spacing: 0px;
+        position:absolute;
+        bottom: 20px;
+        right: 11.4%;
+        flex: 0;
+        //font-family: 'PT Mono', monospace;
+        font-weight: 600;
+        color: $fontGrey2;
+        @include breakpoint-down(tablet){
+            right: 5.7%;
+        }
+        @include hover(15% 100%);
+        &:hover{
+            background-size: 100% 100%
+        }
+    }
+    }
+
+}
