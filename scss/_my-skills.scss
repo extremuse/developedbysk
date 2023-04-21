@@ -39,7 +39,7 @@
                 content: "03.";
                 font-family: 'PT Mono', monospace;
                 position: absolute;
-                bottom: 0;
+                bottom: 17px;
                 color: $fontGrey;
                 font-size: 3rem;
                 @include breakpoint-down(tablet){
@@ -357,7 +357,9 @@
                 flex: 0;
                 //font-family: 'PT Mono', monospace;
                 font-weight: 600;
-                color: $fontGrey2;
+                a{
+                    color: $fontGrey2;
+                    }
                 @include hover(15% 100%);
                 &:hover{
                     background-size: 100% 100%
@@ -383,7 +385,9 @@
     display: none;
     //font-family: 'PT Mono', monospace;
     font-weight: 600;
-    color: $fontGrey2;
+    a{
+        color: $fontGrey2;
+        }
     @include hover(15% 100%);
     &:hover{
         background-size: 100% 100%

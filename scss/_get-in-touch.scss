@@ -69,8 +69,9 @@
                 &:hover{
                     background: rgb(255, 255, 255);
                 }
-                &:hover a{
+                &:hover {
                     color: $black;
+                    font-weight: 5rem;
                 }
                 a{
                     // color: $black;
@@ -92,7 +93,9 @@
         flex: 0;
         //font-family: 'PT Mono', monospace;
         font-weight: 600;
-        color: $fontGrey2;
+        a{
+            color: $fontGrey2;
+            }
         @include breakpoint-down(tablet){
             right: 5.7%;
         }

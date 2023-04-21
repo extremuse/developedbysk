@@ -275,7 +275,9 @@
                 flex: 0;
                 //font-family: 'PT Mono', monospace;
                 font-weight: 600;
+                a{
                 color: $fontGrey2;
+                }
                 @include breakpoint-down(tablet){
                     right: 5.7%;
                 }

@@ -254,6 +254,7 @@
             font-family: Arial, Helvetica, sans-serif;
             font-weight: 600;
             font-size: 1.4rem;
+            transition:0.3s all ease-in; 
             @include flex(center,center,row);
             .span-github{
                 font-size: 0.8rem;
@@ -290,17 +291,35 @@
 .hamburger{
     height: 1.5rem;
     width: 32px;
-   // background-color: azure;
-   display: none;
-    .bars{
-        border-radius: 5%;
+    // background-color: azure;
+    display: none;
+    .bars:nth-child(1){
         background-color: $globalColorSecond;
         height: 2px;
-        width: inherit;
+        width: 12px;
         margin-bottom: 6px;
-        transition: all 0.5s ease;
+        border-radius: 50px;
+        transition: all 0.7s ease;
     }
-
+   display: none;
+   .bars:nth-child(2){
+       background-color: $globalColorSecond;
+       height: 2px;
+       width: inherit;
+       margin-bottom: 6px;
+       border-radius: 50px;
+       transition: all 0.7s ease;
+    }
+    display: none;
+    .bars:nth-child(3){
+        background-color: $globalColorSecond;
+        height: 2px;
+        width: 25px;
+        margin-bottom: 6px;
+        border-radius: 50px;
+        transition: all 0.7s ease;
+    }
+    
     @include breakpoint-down(tablet){
         display: block;
         z-index: 999;
@@ -308,15 +327,19 @@
 }
 .active {
     &:nth-child(1){
-        transform: rotate(55deg) translateY(6px);
+        transform: rotate(125deg) translateY(-10px);
         background-color: $globalColor;
+        width: 32px !important;
     }
     &:nth-child(2){
+        width: 32px !important;
+        margin-left: 20px;
         opacity: 0;
         background-color: $globalColor;
     }
     &:nth-child(3){
-        transform: rotate(-55deg) translateY(-6px);
+        width: 32px !important;
+        transform: rotate(-125deg) translateY(10px);
         background-color: $globalColor;
     }
 }
@@ -470,7 +493,9 @@
         .contact{
             height: 3rem;
             width: 10rem;
+            a{
             color:$black;
+            }
             background-color: $globalColor;
             border: none;
             font-weight: 700;
@@ -485,7 +510,7 @@
                 &:hover{
                     background-color: transparent;
                     border: 2px solid $globalColor;
-                    color: $fontGrey;
+                    a{color: $fontGrey;}
                     font-weight: 400;
                 }
                 @include breakpoint-down(tablet){
