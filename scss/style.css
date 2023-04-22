@@ -378,7 +378,7 @@ a, :visited, :hover {
   width: 25px;
   margin-bottom: 6px;
   border-radius: 50px;
-  transition: all 0.7s ease;
+  transition: all 0.4s ease;
 }
 @media (max-width: 56.25rem) {
   .hamburger {
