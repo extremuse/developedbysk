@@ -1,11 +1,14 @@
 #get-in-touch{
     width: 100vw;
-    height:41rem;
+    height:51rem;
     background-image:url(/assests/get_in_touch_BG.png);
     background-color: $backgroundColor2;
     background-repeat: no-repeat;
     background-position: bottom left;
-    background-size: 60% 65%;
+    background-size: 40% 65%;
+    @media screen and (max-width:1980px) {
+        background-size: 60% 65%;
+    }
     @include breakpoint-down(tablet){
         background-size: 60% 45%;
     }
@@ -67,6 +70,7 @@
                 font-weight: 200;
                 font-family: Roboto Mono,monospace;
                 &:hover{
+                    box-shadow: 0px 0px 7px $fontGrey;
                     background: rgb(255, 255, 255);
                 }
                 &:hover {

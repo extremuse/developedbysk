@@ -234,7 +234,8 @@
                 color: $fontGrey2;
                 }
             @include breakpoint-down(tablet){
-                right: 5.7%;
+                left: 5.7%;
+                width: 10.2rem;
             }
             @include hover(15% 100%);
             &:hover{

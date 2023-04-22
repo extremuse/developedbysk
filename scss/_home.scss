@@ -45,7 +45,7 @@
             left: 7.3rem;
             transform: rotate(27deg);
             animation-name: logo_slash;
-            animation-duration:2s;
+            animation-duration:0.8s;
             overflow: hidden;
 
         }
@@ -57,7 +57,7 @@
             width: 7.3rem;
             //background-color: blueviolet;
             animation-name: logo_sachin;
-            animation-duration:2s;
+            animation-duration:1s;
             position: relative;
             right: 0;
             overflow: hidden;
@@ -112,7 +112,7 @@
             //background-color: aqua;
             line-height: 0.8;
             animation-name: logo_kumar;
-            animation-duration:3s;
+            animation-duration:1.4s;
             position: relative;
             right: 0;
             overflow: hidden;
@@ -192,14 +192,14 @@
             gap:2;
             right: 0;
             backdrop-filter:blur(10px);
-            transition: all 0.5s ease-in;
+            transition: all 0.4s ease-in;
             z-index:999;
             .menu-items{
                 z-index:999;
                 margin-bottom: 20px;
                 opacity: 0;
 
-                transition: all 0.79s ease-in;
+                transition: all 0.5s ease-in;
                 a{
                     pointer-events: none;
                 }
@@ -281,6 +281,9 @@
 }
 .menu-2{
     clip-path: circle(100% ) !important;
+    a{
+        pointer-events:visible !important;
+    }
 }
 .link-effect{
     opacity: 100% !important;
@@ -494,6 +497,10 @@
             width: 10rem;
             a{
             color:$black;
+            &:visited :active{
+                background-color: inherit;
+                border: inherit;
+            }
             }
             background-color: $globalColor;
             border: none;
