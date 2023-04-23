@@ -128,7 +128,7 @@ gsap.to(".about-2",{
         trigger:".about-2",
         start:"top 95%",
         end:"bottom 0%",
-        markers:true,
+        // markers:true,
         toggleActions:"restart pause resume none"
     }
 })
@@ -140,7 +140,7 @@ gsap.to(".about-3",{
         trigger:".about-3",
         start:"top 95%",
         end:"bottom 0%",
-        markers:true,
+        // markers:true,
         toggleActions:"restart pause resume none"
     }
 })
