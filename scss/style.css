@@ -56,6 +56,35 @@ a, :visited, :hover {
   text-decoration: none;
 }
 
+.creative-top, .creative-center, .creative-bottom {
+  transform: translatey(100px);
+  opacity: 0;
+}
+
+.hello {
+  transform: translatey(300px);
+  opacity: 0;
+}
+
+.about-1 {
+  transform: translateX(-200px);
+  opacity: 0;
+}
+
+.about-2 {
+  transform: translateX(200px);
+  opacity: 0;
+}
+
+.about-3 {
+  transform: translateX(-200px);
+  opacity: 0;
+}
+
+.about-me-text {
+  right: -10 0px;
+}
+
 #home {
   width: 100vw;
 }
@@ -1319,7 +1348,7 @@ a, :visited, :hover {
 @media (max-width: 56.25rem) {
   #about-me .about-me-inner .about-me-content-right .about-me-text {
     left: 5.7%;
-    width: 12.5rem;
+    width: 12.7rem;
   }
 }
 #about-me .about-me-inner .about-me-content-right .about-me-text:hover {
@@ -1882,7 +1911,7 @@ a, :visited, :hover {
 }
 @media (max-width: 56.25rem) {
   #projects .projects-inner {
-    height: 65rem;
+    height: 77rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1892,6 +1921,7 @@ a, :visited, :hover {
 @media (max-width: 39.9375rem) {
   #projects .projects-inner {
     padding: 0px 100px;
+    height: 65rem;
   }
 }
 #projects .projects-inner::before {

@@ -41,3 +41,34 @@ body{
 a,:visited,:hover{
     text-decoration: none;
 }
+
+//about-me animtion
+
+.creative-top ,.creative-center , .creative-bottom {
+    transform: translatey(100px);
+    opacity: 0;
+}
+.hello{
+    transform: translatey(300px);
+    opacity: 0;
+    
+}
+.about-1{
+    transform: translateX(-200px);
+    opacity: 0;
+
+}
+.about-2 {
+    transform: translateX(200px);
+    opacity: 0;
+
+}
+.about-3{
+    transform: translateX(-200px);
+    opacity: 0;
+
+}
+.about-me-text{
+    right: -10
+    00px;
+}

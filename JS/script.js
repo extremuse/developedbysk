@@ -3,7 +3,6 @@ const bars=document.querySelectorAll(".bars");
 const menu=document.querySelector(".menu");
 const menu_links=document.querySelectorAll(".menu-items");
 const menu_anchor=document.querySelectorAll(".menu-items a");
-console.log("sk")
 hamburger.addEventListener('click', ()=>{
     bars.forEach((bars) =>{
         bars.classList.toggle('active')
@@ -12,7 +11,6 @@ hamburger.addEventListener('click', ()=>{
     menu_links.forEach((menu_links) =>{
         menu_links.classList.toggle("link-effect")
     })
-    console.log("ak2222")
 })
 // menu_anchor.addEventListener('click', () =>{
 //     // console.log("dhjkh")
@@ -32,3 +30,26 @@ menu_anchor.forEach((menu_anchor) =>{
         })
     })
 })
+
+//end of nav bar 
+
+
+//home animation
+
+// const boxes = document.querySelectorAll('.boxes');
+
+// window.addEventListener('scroll' ,checkboxes);
+// checkboxes();
+// function checkboxes(){
+// const trigger = window.innerHeight/ 100*2;
+// console.log(window.innerHeight);
+// boxes.forEach((box) =>{
+//     const boxtop = box.getBoundingClientRect().top;
+//     if (boxtop < trigger){
+//         box.classList.add('show');
+//     }
+//     else{
+//         box.classList.remove('show');
+//     }
+// })
+// }
