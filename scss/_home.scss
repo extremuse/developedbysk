@@ -203,6 +203,9 @@
                     pointer-events: none;
                 }
             }
+                        .span-num{
+                display: none;
+            }
         }
         @include breakpoint-down(small){
             width:100vw;

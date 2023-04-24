@@ -39,6 +39,15 @@ html {
   margin: 0;
   padding: 0;
 }
+*::-webkit-scrollbar {
+  background-color: #111414;
+  width: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #00f4ff;
+  border: 2px solid #1d2222;
+  border-radius: 20px;
+}
 
 body {
   font-family: "Raleway", sans-serif;
@@ -54,35 +63,6 @@ body {
 
 a, :visited, :hover {
   text-decoration: none;
-}
-
-.creative-top, .creative-center, .creative-bottom {
-  transform: translatey(100px);
-  opacity: 0;
-}
-
-.hello {
-  transform: translatey(300px);
-  opacity: 0;
-}
-
-.about-1 {
-  transform: translateX(-200px);
-  opacity: 0;
-}
-
-.about-2 {
-  transform: translateX(200px);
-  opacity: 0;
-}
-
-.about-3 {
-  transform: translateX(-200px);
-  opacity: 0;
-}
-
-.about-me-text {
-  right: -10 0px;
 }
 
 #home {
@@ -284,6 +264,9 @@ a, :visited, :hover {
   }
   .navbar .menu .menu-items a {
     pointer-events: none;
+  }
+  .navbar .menu .span-num {
+    display: none;
   }
 }
 @media (max-width: 39.9375rem) {
@@ -1150,7 +1133,7 @@ a, :visited, :hover {
 }
 @media (max-width: 39.9375rem) {
   #about-me .about-me-inner .about-me-content-left .hello {
-    top: 0%;
+    top: 10%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -2356,7 +2339,7 @@ a, :visited, :hover {
 #get-in-touch .get-in-touch-inner .social-icons .designed-by-sk {
   font-family: Roboto Mono, monospace;
 }
-#get-in-touch .get-in-touch-inner .projects-text {
+#get-in-touch .get-in-touch-inner .get-in-touch-text {
   font-size: 3rem;
   letter-spacing: -2px;
   word-spacing: 0px;
@@ -2371,14 +2354,14 @@ a, :visited, :hover {
   background-repeat: no-repeat;
   transition: background-size 500ms;
 }
-#get-in-touch .get-in-touch-inner .projects-text a {
+#get-in-touch .get-in-touch-inner .get-in-touch-text a {
   color: #a5a5a5;
 }
 @media (max-width: 56.25rem) {
-  #get-in-touch .get-in-touch-inner .projects-text {
+  #get-in-touch .get-in-touch-inner .get-in-touch-text {
     right: 5.7%;
   }
 }
-#get-in-touch .get-in-touch-inner .projects-text:hover {
+#get-in-touch .get-in-touch-inner .get-in-touch-text:hover {
   background-size: 100% 100%;
 }/*# sourceMappingURL=style.css.map */

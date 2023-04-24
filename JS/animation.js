@@ -1,6 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
 //---------home-----------
+
 gsap.fromTo(".menu .menu-items",{
     y:-5 ,
     opacity:0,
@@ -38,124 +39,162 @@ gsap.fromTo(".hamburger",{
     opacity:1,
     duration:0.8,
     ease:"bounce.out",
-},{
-}                                                      
+},                                                      
 )
-gsap.fromTo(".content-left .introduce-name + .works-define +.my-thought + .contact-me-button",{
+gsap.fromTo(".content-left .left",{
     x:-200,
     opacity:0,
 },
 {
     x:0,
-    stagger:{from:"center",amount:0.3,ease:"power2.inOut"},
     opacity:1,
-    duration:0.7,
-},{
-}
-)
-gsap.fromTo(".my-image",{
-    y:200,
-    opacity:0,
+    duration:0.5,
 },
-{
-    y:0,
-    opacity:1,
-    duration:0.7,
-},{
-}
 )
-gsap.fromTo(".code-icons",{
-    scale:0.1,
-    opacity:0,
-},
-{
-    scale:1,
-    opacity:1,
-    duration:1.1,
-},{
-}
-)
-gsap.fromTo(".my-image-left",{
+const t1 = gsap.timeline({
+    defaults:{duration:1,ease:"power2.inOut"}
+})
+t1.from(".my-image-left",{x:200,opacity:0,duration:0.2})
+  .from(".my-image",{y:200,opacity:0,duration:0.1})
+  .fromTo(".code-icons",{scale:0.1,opacity:0},{scale:1,opacity:1 ,duration:0.4 ,stagger:0.1})
+  
+  gsap.from(".social-icons-right .social_icons",{
     y:100,
+    duration:0.4,
+    stagger:0.1,
     opacity:0
-},
-{
-    y:0,
-    opacity:1,
-    duration:0.7,
-},{
-}
-)
-
+})
+gsap.from(".social-icons-right ",{
+    y:100,
+    duration:0.5,
+    stagger:0.1,
+    opacity:0
+})
 //--------------end of home
 
 //---------------about mee
 
-gsap.to(".creative-top ,.creative-center , .creative-bottom",{
-    y:0,
-    duration:0.7,
-    opacity:1,
-    scrollTrigger:{
-        trigger:".about-me-content-left",
-        start:"top 75%",
-        end:"bottom 0%",
-        toggleActions:"restart "
-    }
-})
-gsap.to(".hello",{
-    y:0,
-    duration:0.7,
-    opacity:1,
-    scrollTrigger:{
-        trigger:".creative-bottom",
-        start:"top 85%",
-        end:"bottom 0%",
-        toggleActions:"restart "
-    }
-})
-gsap.to(".about-1",{
-    x:0,
-    duration:0.7,
-    opacity:1,
-    scrollTrigger:{
-        trigger:".creative-bottom",
-        start:"top 85%",
-        end:"bottom 0%",
-        toggleActions:"restart pause resume none"
-    }
-})
-gsap.to(".about-2",{
-    x:0,
-    duration:0.7,
-    opacity:1,
-    scrollTrigger:{
-        trigger:".about-2",
-        start:"top 95%",
-        end:"bottom 0%",
-        // markers:true,
-        toggleActions:"restart pause resume none"
-    }
-})
-gsap.to(".about-3",{
-    x:0,
-    duration:1,
-    opacity:1,
-    scrollTrigger:{
-        trigger:".about-3",
-        start:"top 95%",
-        end:"bottom 0%",
-        // markers:true,
-        toggleActions:"restart pause resume none"
-    }
+const t2 =gsap.timeline({
+    defaults:{duration:1 ,ease:"circ",}
 })
 
+t2.from(".about-me-content-left .content" ,{opacity:0,x:-200,duration:0.5})
+t2.from(".about-me-content-left .hello" ,{opacity:0,y:200,duration:0.4});
 
-//-----------gsap timeline for header----------
-// gsap.registerPLugin(scrollTrigger);
-// gsap.registerPlugin(ScrollTrigger);
 
-// const t1 = gsap.timeline({
-//     defaults:{duration:0,ease:"power2"}
-// });
-// t1.fromTo(".mail-git-dark-box", {x:200, opacity:0}, {duration:0.3, x:0,opacity:1,ease:"bounce"})
-// .fromTo(".menu .menu-items", {x:0 ,y:-5,opacity:0}, {duration: 1,y:0, x:0,opacity:1,stagger:{from:"center",amount:0.5,ease:"power1.inOut"},})
+const t3 =gsap.timeline({
+    defaults:{duration:0 ,ease:"power3.inout",}
+})
+t3.reverse()
+t3.fromTo(".about-1" ,{opacity:0,x:300},{opacity:1,x:0,duration:0.3,    stagger:{from:"start",amount:0.7,ease:"power2.in"}})
+t3.fromTo(".about-2" ,{opacity:0,x:-300},{opacity:1,x:0,duration:0.3,    stagger:{from:"start",amount:0.7,ease:"power2.in"}})
+t3.fromTo(".about-3" ,{opacity:0,x:300},{opacity:1,x:0,duration:0.3,    stagger:{from:"start",amount:0.7,ease:"power2.in"}})
+t3.fromTo(".about-me-text" ,{opacity:0,x:300},{opacity:1,x:0,duration:0.3,    stagger:{from:"start",amount:0.7,ease:"power2.in"}})
+
+
+
+ScrollTrigger.create({
+    trigger: ".about-me-content-left ",
+    animation: t2,
+    toggleActions:"restart reverse restart reverse",
+    start: "top: 70%",
+    end:"bottom 30%",
+});
+ScrollTrigger.create({
+    trigger: ".about-me-content-right ",
+    animation: t3,
+    toggleActions:"restart reverse restart reverse",
+    start: "top: 70%",
+    end:"bottom 30%",
+});
+
+
+
+//--------------end of about me
+
+//-----------------my skils
+
+const t4=gsap.timeline({
+    defaults:{duration:0.3 ,ease:"sine",}
+})
+t4.from(".card-1" ,{opacity:0,x:-500,stagger:false})
+t4.from(".card-2" ,{opacity:0,x:-520,stagger:{from:"start",amount:0.7}})
+t4.from(".card-3" ,{opacity:0,x:-550,stagger:{from:"start",amount:0.7}})
+
+ScrollTrigger.create({
+    trigger: ".card-1",
+    animation: t4,
+    start: "top: 70%",
+    ease:"sine",
+    toggleActions:"restart reverse restart reverse",
+    end:"bottom -20%",
+});
+const t5=gsap.timeline({
+    defaults:{duration:0.3 ,ease:"sine",}
+})
+t5.from(".my-skills-future" ,{opacity:0,x:500,stagger:false,duration:0.3})
+t5.from(".ellipse .circular" ,{opacity:0,stagger:{from:"start",amount:0.5}})
+t5.from(".my-skills-text" ,{opacity:0,x:500,stagger:false,duration:0.3})
+t5.from(".my-skills-text-2" ,{opacity:0,x:200,stagger:false,duration:0.3})
+ScrollTrigger.create({
+    trigger: ".card-1",
+    animation: t5,
+    start: "top: 70%",
+    ease:"sine",
+    toggleActions:"restart reverse restart reverse",
+    end:"bottom -20%",
+});
+
+//--------------end of my skills
+
+//---------------projects
+
+const t6=gsap.timeline({
+    defaults:{duration:0.3 ,ease:"sine",}
+})
+t6.from(".projects-top .top-animate" ,{opacity:0,y:100,stagger:false})
+t6.from(".projects-top .second-animate" ,{opacity:0,x:-300,stagger:{from:"start",amount:0.7}})
+ScrollTrigger.create({
+    trigger: ".projects-top",
+    animation: t6,
+    start: "top: 70%",
+    ease:"sine",
+    toggleActions:"restart reverse restart reverse",
+    end:"bottom 30%",
+});
+const t7=gsap.timeline({
+    defaults:{duration:0.3 ,ease:"sine",}
+})
+t7.from(".projects-bottom .top-animate" ,{opacity:0,y:100,stagger:false})
+t7.from(".projects-bottom .second-animate" ,{opacity:0,x:300,stagger:{from:"start",amount:0.7}})
+t7.from(".projects-text" ,{opacity:0,x:300,stagger:{from:"start",amount:0.7}})
+ScrollTrigger.create({
+    trigger: ".projects-bottom",
+    animation: t7,
+    start: "top: 70%",
+    ease:"sine",
+    toggleActions:"restart reverse restart reverse",
+    end:"bottom 30%",
+});
+
+//--------------end of project
+
+//--------------get in touch
+
+
+const t8=gsap.timeline({
+    defaults:{duration:0.3 ,ease:"sine",}
+})
+t8.from(".content" ,{opacity:0,y:100,stagger:false})
+t8.from(".social-icons .icons" ,{opacity:0,x:100,duration:0.3,stagger:{from:"start",amount:0.3}})
+t8.from(".designed-by-sk" ,{opacity:0,y:10,duration:0.2,stagger:false})
+t8.from(".get-in-touch-text" ,{opacity:0,x:100,duration:0.2,stagger:false})
+ScrollTrigger.create({
+    trigger: ".designed-by-sk",
+    animation: t8,
+    start: "top: 76%",
+    ease:"sine",
+    toggleActions:"restart reverse restart reverse",
+    end:"bottom 20%",
+    markers: true,
+});
