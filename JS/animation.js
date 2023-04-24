@@ -1,16 +1,17 @@
 gsap.registerPlugin(ScrollTrigger);
 
 //---------home-----------
-gsap.fromTo(".menu",{
-    y:-20,
+gsap.fromTo(".menu .menu-items",{
+    y:-5 ,
     opacity:0,
 },
 {
     y:0,
     opacity:1,
-    duration:0.7,
+    duration:01,
+    stagger:{from:"center",amount:0.3,ease:"power2.inOut"},
 },
-                                                    
+
 )
 gsap.fromTo(".mail-git-dark-box",{
     x:200,
@@ -21,6 +22,7 @@ gsap.fromTo(".mail-git-dark-box",{
     x:0,
     scale:1,
     opacity:1,
+    ease:"bounce",
     duration:0.7,
 },{
 }                                                       
@@ -34,16 +36,18 @@ gsap.fromTo(".hamburger",{
     x:0,
     scale:1,
     opacity:1,
-    duration:0.7,
+    duration:0.8,
+    ease:"bounce.out",
 },{
 }                                                      
 )
-gsap.fromTo(".content-left",{
+gsap.fromTo(".content-left .introduce-name + .works-define +.my-thought + .contact-me-button",{
     x:-200,
     opacity:0,
 },
 {
     x:0,
+    stagger:{from:"center",amount:0.3,ease:"power2.inOut"},
     opacity:1,
     duration:0.7,
 },{
@@ -144,3 +148,14 @@ gsap.to(".about-3",{
         toggleActions:"restart pause resume none"
     }
 })
+
+
+//-----------gsap timeline for header----------
+// gsap.registerPLugin(scrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
+
+// const t1 = gsap.timeline({
+//     defaults:{duration:0,ease:"power2"}
+// });
+// t1.fromTo(".mail-git-dark-box", {x:200, opacity:0}, {duration:0.3, x:0,opacity:1,ease:"bounce"})
+// .fromTo(".menu .menu-items", {x:0 ,y:-5,opacity:0}, {duration: 1,y:0, x:0,opacity:1,stagger:{from:"center",amount:0.5,ease:"power1.inOut"},})
