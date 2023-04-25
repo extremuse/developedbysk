@@ -1894,17 +1894,19 @@ a, :visited, :hover {
 }
 @media (max-width: 56.25rem) {
   #projects .projects-inner {
-    height: 77rem;
+    height: 80rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     flex-direction: column;
+    gap: 50px;
   }
 }
 @media (max-width: 39.9375rem) {
   #projects .projects-inner {
+    gap: 50px;
     padding: 0px 100px;
-    height: 65rem;
+    height: 60rem;
   }
 }
 #projects .projects-inner::before {

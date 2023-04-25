@@ -158,10 +158,10 @@ t6.from(".projects-top .second-animate" ,{opacity:0,x:-300,stagger:{from:"start"
 ScrollTrigger.create({
     trigger: ".projects-top",
     animation: t6,
-    start: "top: 70%",
+    start: "top: 75%",
     ease:"sine",
     toggleActions:"restart reverse restart reverse",
-    end:"bottom 30%",
+    end:"bottom 15%",
 });
 const t7=gsap.timeline({
     defaults:{duration:0.3 ,ease:"sine",}

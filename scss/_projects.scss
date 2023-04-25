@@ -12,12 +12,14 @@
         @include flex(center,flex-start,column);
         gap: 80px;
         @include breakpoint-down(tablet){
-            height:77rem;
-            @include flex(center,center,column);
+            height:80rem;
+            @include flex(flex-end,center,column);
+            gap: 50px;
         }
         @include breakpoint-down(small){
+            gap: 50px;  
             padding: 0px 100px;
-            height:65rem;
+            height:60rem;
         }
 
         &::before{
