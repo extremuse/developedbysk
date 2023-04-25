@@ -191,14 +191,14 @@
             gap:2;
             right: 0;
             backdrop-filter:blur(10px);
-            transition: all 0.2s ease-in;
+            transition: all 0.3s ease-in;
             z-index:999;
             .menu-items{
                 z-index:999;
                 margin-bottom: 20px;
                 opacity: 0;
-
-                transition: all 0.3s ease-in;
+                
+                transition: all 01s ease-in;
                 a{
                     pointer-events: none;
                 }
@@ -247,16 +247,16 @@
         }
         a{
             color: $globalColor;
-        .github{
-            margin-right: 15px;
-            border: 1.5px solid $globalColor;
-            padding: 10px 20px  ;
-            border-radius: 8px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 600;
-            font-size: 1.4rem;
-            transition:0.3s all ease-in; 
-            @include flex(center,center,row);
+            .github{
+                margin-right: 15px;
+                border: 1.5px solid $globalColor;
+                padding: 10px 20px  ;
+                border-radius: 8px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;
+                font-size: 1.4rem;
+                transition:0.3s all ease-in; 
+                @include flex(center,center,row);
             .span-github{
                 font-size: 0.8rem;
                 padding-left: 10px;
@@ -269,17 +269,17 @@
             }
         }
     }
-        .theme-mode{
-            margin-right: 15px;
-            color: $globalColor;
-            height:100%;
-            &:hover{
-                color:$white;
-                transform: scale(1.1);
-            }
+    .theme-mode{
+        margin-right: 15px;
+        color: $globalColor;
+        height:100%;
+        &:hover{
+            color:$white;
+            transform: scale(1.1);
         }
     }
-    
+}
+
 }
 .menu-2{
     clip-path: circle(100% ) !important;
@@ -305,7 +305,7 @@
         border-radius: 50px;
         transition: all 0.2s ease;
     }
-   display: none;
+    display: none;
    .bars:nth-child(2){
        background-color: $globalColorSecond;
        height: 3px;
