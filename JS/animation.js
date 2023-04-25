@@ -188,14 +188,15 @@ const t8=gsap.timeline({
     defaults:{duration:0.3 ,ease:"sine",}
 })
 t8.from(".get-in-touch-inner .content" ,{opacity:0,y:100,stagger:false})
-t8.from(".social-icons .icons" ,{opacity:0,x:100,duration:0.3,stagger:{from:"start",amount:0.3}})
+t8.from(".social-icons .icons" ,{opacity:0,x:100,duration:0.2,stagger:{from:"start",amount:0.2}})
 t8.from(".designed-by-sk" ,{opacity:0,y:10,duration:0.2,stagger:false})
 t8.from(".get-in-touch-text" ,{opacity:0,x:100,duration:0.2,stagger:false})
 ScrollTrigger.create({
     trigger: ".designed-by-sk",
     animation: t8,
-    start: "top: 76%",
+    start: "top: 90%",
     ease:"sine",
     toggleActions:"restart reverse restart reverse",
-    end:"bottom 20%",
+    end:"bottom 0%",
+    markers:true
 });
