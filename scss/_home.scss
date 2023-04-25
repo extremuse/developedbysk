@@ -191,14 +191,14 @@
             gap:2;
             right: 0;
             backdrop-filter:blur(10px);
-            transition: all 0.4s ease-in;
+            transition: all 0.2s ease-in;
             z-index:999;
             .menu-items{
                 z-index:999;
                 margin-bottom: 20px;
                 opacity: 0;
 
-                transition: all 0.5s ease-in;
+                transition: all 0.3s ease-in;
                 a{
                     pointer-events: none;
                 }
@@ -303,7 +303,7 @@
         width: 12px;
         margin-bottom: 6px;
         border-radius: 50px;
-        transition: all 0.4s ease;
+        transition: all 0.2s ease;
     }
    display: none;
    .bars:nth-child(2){
@@ -312,7 +312,7 @@
        width: inherit;
        margin-bottom: 6px;
        border-radius: 50px;
-       transition: all 0.3s ease;
+       transition: all 0.1s ease;
     }
     display: none;
     .bars:nth-child(3){
@@ -321,7 +321,7 @@
         width: 25px;
         margin-bottom: 6px;
         border-radius: 50px;
-        transition: all 0.4s ease;
+        transition: all 0.2s ease;
     }
     
     @include breakpoint-down(tablet){
