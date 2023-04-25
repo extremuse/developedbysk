@@ -31,9 +31,9 @@
         @include breakpoint-down(tablet){
             width: 5%;
         }
-        // @include breakpoint-down(medium){
-        //     flex: 1.2;
-        // }
+        @include breakpoint-down(medium){
+            flex: 1.2;
+        }
         &::after{
             content: "";
             background-color: $globalColor;

@@ -107,6 +107,11 @@ a, :visited, :hover {
     width: 5%;
   }
 }
+@media (max-width: 64rem) {
+  .navbar .logo {
+    flex: 1.2;
+  }
+}
 .navbar .logo::after {
   content: "";
   background-color: #00f4ff;
