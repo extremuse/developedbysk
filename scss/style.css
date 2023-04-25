@@ -97,9 +97,25 @@ a, :visited, :hover {
 }
 .navbar .logo {
   width: 10%;
-  flex: 1;
+  flex: 1 1;
   position: relative;
   top: 8px;
+  color: #d9d9d9;
+}
+@media (max-width: 56.25rem) {
+  .navbar .logo {
+    width: 5%;
+  }
+}
+@media (max-width: 64rem) {
+  .navbar .logo {
+    flex: 1.2;
+  }
+}
+@media (max-width: 39.9375rem) {
+  .navbar .logo {
+    flex: 3;
+  }
 }
 .navbar .logo::after {
   content: "";
@@ -111,21 +127,22 @@ a, :visited, :hover {
   left: 7.3rem;
   transform: rotate(27deg);
   animation-name: logo_slash;
-  animation-duration: 2s;
+  animation-duration: 0.8s;
   overflow: hidden;
 }
-.navbar .logo a {
-  color: #d9d9d9;
-}
-.navbar .logo a .logo-sachin {
+.navbar .logo .logo-sachin {
   font-size: 2rem;
   line-height: 0.8;
   width: 7.3rem;
   animation-name: logo_sachin;
-  animation-duration: 2s;
+  animation-duration: 1s;
   position: relative;
-  right: 0;
   overflow: hidden;
+}
+@media (max-width: 98rem) {
+  .navbar .logo .logo-sachin {
+    line-height: 1;
+  }
 }
 @keyframes logo_slash {
   0% {
@@ -161,13 +178,13 @@ a, :visited, :hover {
     right: 0;
   }
 }
-.navbar .logo a .logo-kumar {
+.navbar .logo .logo-kumar {
   font-weight: 800;
-  font-size: 2rem;
+  font-size: 2.1rem;
   margin-left: 7.3rem;
   line-height: 0.8;
   animation-name: logo_kumar;
-  animation-duration: 3s;
+  animation-duration: 1.4s;
   position: relative;
   right: 0;
   overflow: hidden;

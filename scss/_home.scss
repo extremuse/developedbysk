@@ -25,9 +25,18 @@
     .logo{
         //background-color: aquamarine;
         width: 10%;
-        flex: 1;
+        flex: 1 1;
         position: relative;
         top: 8px;
+        @include breakpoint-down(tablet){
+            width: 5%;
+        }
+        @include breakpoint-down(medium){
+            flex: 1.2;
+        }
+        @include breakpoint-down(small){
+            flex: 3;
+        }
         &::after{
             content: "";
             background-color: $globalColor;
@@ -38,10 +47,10 @@
             left: 7.3rem;
             transform: rotate(27deg);
             animation-name: logo_slash;
-            animation-duration:2s;
+            animation-duration:0.8s;
             overflow: hidden;
+
         }
-        a{
             color:$fontGrey;
         .logo-sachin{
             //color: black;
@@ -50,10 +59,14 @@
             width: 7.3rem;
             //background-color: blueviolet;
             animation-name: logo_sachin;
-            animation-duration:2s;
+            animation-duration:1s;
             position: relative;
-            right: 0;
             overflow: hidden;
+            @include breakpoint-down(xlarge){
+                line-height: 1;
+            }
+                
+            
             @keyframes logo_slash {
                 0%{
                 left:0rem;
@@ -96,12 +109,12 @@
         }
         .logo-kumar{
             font-weight:800;
-            font-size: 2rem;
+            font-size: 2.1rem;
             margin-left: 7.3rem;
             //background-color: aqua;
             line-height: 0.8;
             animation-name: logo_kumar;
-            animation-duration:3s;
+            animation-duration:1.4s;
             position: relative;
             right: 0;
             overflow: hidden;
@@ -124,7 +137,7 @@
                 
             }
         }
-    }
+    
     }
     .menu{
         flex: 2 1;
