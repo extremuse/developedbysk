@@ -131,19 +131,19 @@ ScrollTrigger.create({
     end:"bottom -20%",
 });
 const t5=gsap.timeline({
-    defaults:{duration:0.3 ,ease:"sine",}
+    defaults:{duration:0.3 ,ease:"power1",}
 })
 t5.from(".my-skills-future" ,{opacity:0,x:500,stagger:false,duration:0.3})
 t5.from(".ellipse .circular" ,{opacity:0,stagger:{from:"start",amount:0.5}})
-t5.from(".my-skills-text" ,{opacity:0,x:500,stagger:false,duration:0.3})
-t5.from(".my-skills-text-2" ,{opacity:0,x:200,stagger:false,duration:0.3})
+t5.from(".my-skills-text-2" ,{opacity:0,x:100,stagger:false,duration:0.2})
+t5.from(".my-skills-text" ,{opacity:0,x:100,stagger:false,duration:0.2})
 ScrollTrigger.create({
     trigger: ".card-1",
     animation: t5,
     start: "top: 70%",
     ease:"sine",
     toggleActions:"restart reverse restart reverse",
-    end:"bottom -20%",
+    end:"bottom -60%",
 });
 
 //--------------end of my skills
