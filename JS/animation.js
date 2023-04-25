@@ -23,7 +23,7 @@ gsap.fromTo(".mail-git-dark-box",{
     x:0,
     scale:1,
     opacity:1,
-    ease:"bounce",
+    ease:"power1",
     duration:0.7,
 },{
 }                                                       
@@ -42,20 +42,21 @@ gsap.fromTo(".hamburger",{
 },                                                      
 )
 gsap.fromTo(".content-left .left",{
-    x:-200,
+    x:-300,
     opacity:0,
 },
 {
     x:0,
     opacity:1,
-    duration:0.5,
+    duration:0.7,
+    ease:"power1"
 },
 )
 const t1 = gsap.timeline({
-    defaults:{duration:1,ease:"power2.inOut"}
+    defaults:{duration:1,ease:"power1"}
 })
-t1.from(".my-image-left",{x:200,opacity:0,duration:0.2})
-  .from(".my-image",{y:200,opacity:0,duration:0.1})
+t1.from(".my-image-left",{x:300,opacity:0,duration:0.4})
+  .from(".my-image",{y:300,opacity:0,duration:0.2})
   .fromTo(".code-icons",{scale:0.1,opacity:0},{scale:1,opacity:1 ,duration:0.4 ,stagger:0.1})
   
   gsap.from(".social-icons-right .social_icons",{
@@ -79,7 +80,7 @@ const t2 =gsap.timeline({
 })
 
 t2.from(".about-me-content-left .content" ,{opacity:0,x:-200,duration:0.5})
-t2.from(".about-me-content-left .hello" ,{opacity:0,y:200,duration:0.4});
+t2.from(".about-me-content-left .hello" ,{opacity:0,y:200,duration:0.2});
 
 
 const t3 =gsap.timeline({
@@ -174,7 +175,7 @@ ScrollTrigger.create({
     start: "top: 70%",
     ease:"sine",
     toggleActions:"restart reverse restart reverse",
-    end:"bottom 30%",
+    end:"bottom 12%",
 });
 
 //--------------end of project
@@ -185,7 +186,7 @@ ScrollTrigger.create({
 const t8=gsap.timeline({
     defaults:{duration:0.3 ,ease:"sine",}
 })
-t8.from(".content" ,{opacity:0,y:100,stagger:false})
+t8.from(".get-in-touch-inner .content" ,{opacity:0,y:100,stagger:false})
 t8.from(".social-icons .icons" ,{opacity:0,x:100,duration:0.3,stagger:{from:"start",amount:0.3}})
 t8.from(".designed-by-sk" ,{opacity:0,y:10,duration:0.2,stagger:false})
 t8.from(".get-in-touch-text" ,{opacity:0,x:100,duration:0.2,stagger:false})
@@ -196,5 +197,4 @@ ScrollTrigger.create({
     ease:"sine",
     toggleActions:"restart reverse restart reverse",
     end:"bottom 20%",
-    markers: true,
 });
