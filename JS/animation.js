@@ -125,7 +125,6 @@ t4.from(".card-3" ,{opacity:0,x:-550,stagger:{from:"start",amount:0.7}})
 
 ScrollTrigger.create({
     trigger: ".card-1",
-    markers:true,
     animation: t4,
     start: "top: 85%",
     ease:"sine",
