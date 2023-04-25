@@ -127,7 +127,7 @@ ScrollTrigger.create({
     trigger: ".card-1",
     markers:true,
     animation: t4,
-    start: "top: 70%",
+    start: "top: 85%",
     ease:"sine",
     toggleActions:"restart reverse restart reverse",
     end:"bottom -20%",
@@ -142,7 +142,7 @@ t5.from(".my-skills-text" ,{opacity:0,x:100,stagger:false,duration:0.2})
 ScrollTrigger.create({
     trigger: ".my-skills-future",
     animation: t5,
-    start: "top: 70%",
+    start: "top: 85%",
     ease:"sine",
     toggleActions:"restart reverse restart reverse",
     end:"bottom -60%",
