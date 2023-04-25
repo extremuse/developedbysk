@@ -79,7 +79,7 @@ const t2 =gsap.timeline({
     defaults:{duration:1 ,ease:"circ",}
 })
 
-t2.from(".about-me-content-left .content" ,{opacity:0,x:-200,duration:0.5})
+t2.from(".about-me-content-left .content" ,{opacity:0,x:-200,duration:0.3})
 t2.from(".about-me-content-left .hello" ,{opacity:0,y:200,duration:0.2});
 
 
@@ -87,23 +87,25 @@ const t3 =gsap.timeline({
     defaults:{duration:0 ,ease:"power3.inout",}
 })
 t3.reverse()
-t3.fromTo(".about-1" ,{opacity:0,x:300},{opacity:1,x:0,duration:0.3,    stagger:{from:"start",amount:0.7,ease:"power2.in"}})
-t3.fromTo(".about-2" ,{opacity:0,x:-300},{opacity:1,x:0,duration:0.3,    stagger:{from:"start",amount:0.7,ease:"power2.in"}})
-t3.fromTo(".about-3" ,{opacity:0,x:300},{opacity:1,x:0,duration:0.3,    stagger:{from:"start",amount:0.7,ease:"power2.in"}})
-t3.fromTo(".about-me-text" ,{opacity:0,x:300},{opacity:1,x:0,duration:0.3,    stagger:{from:"start",amount:0.7,ease:"power2.in"}})
+t3.fromTo(".about-1" ,{opacity:0,x:300},{opacity:1,x:0,duration:0.2,    stagger:{from:"start",amount:0.3,ease:"power2"}})
+t3.fromTo(".about-2" ,{opacity:0,x:-300},{opacity:1,x:0,duration:0.2,    stagger:{from:"start",amount:0.3,ease:"power2"}})
+t3.fromTo(".about-3" ,{opacity:0,x:300},{opacity:1,x:0,duration:0.2,    stagger:{from:"start",amount:0.3,ease:"power2"}})
+t3.fromTo(".about-me-text" ,{opacity:0,x:300},{opacity:1,x:0,duration:0.2,    stagger:{from:"start",amount:0.3,ease:"power2"}})
 
 
 
 ScrollTrigger.create({
+    markers:true   ,    
     trigger: ".about-me-content-left ",
     animation: t2,
     toggleActions:"restart reverse restart reverse",
     start: "top: 70%",
-    end:"bottom 30%",
+    end:"bottom 15%",
 });
 ScrollTrigger.create({
     trigger: ".about-me-content-right ",
     animation: t3,
+    duration:0.1,
     toggleActions:"restart reverse restart reverse",
     start: "top: 70%",
     end:"bottom 30%",
@@ -116,7 +118,7 @@ ScrollTrigger.create({
 //-----------------my skils
 
 const t4=gsap.timeline({
-    defaults:{duration:0.3 ,ease:"sine",}
+    defaults:{duration:0.1 ,ease:"sine",}
 })
 t4.from(".card-1" ,{opacity:0,x:-500,stagger:false})
 t4.from(".card-2" ,{opacity:0,x:-520,stagger:{from:"start",amount:0.7}})
@@ -131,14 +133,14 @@ ScrollTrigger.create({
     end:"bottom -20%",
 });
 const t5=gsap.timeline({
-    defaults:{duration:0.3 ,ease:"power1",}
+    defaults:{duration:0.4 ,ease:"power1",}
 })
 t5.from(".my-skills-future" ,{opacity:0,x:500,stagger:false,duration:0.3})
 t5.from(".ellipse .circular" ,{opacity:0,stagger:{from:"start",amount:0.5}})
 t5.from(".my-skills-text-2" ,{opacity:0,x:100,stagger:false,duration:0.2})
 t5.from(".my-skills-text" ,{opacity:0,x:100,stagger:false,duration:0.2})
 ScrollTrigger.create({
-    trigger: ".card-1",
+    trigger: ".my-skills-future",
     animation: t5,
     start: "top: 70%",
     ease:"sine",
