@@ -94,8 +94,7 @@ t3.fromTo(".about-me-text" ,{opacity:0,x:300},{opacity:1,x:0,duration:0.2,    st
 
 
 
-ScrollTrigger.create({
-    markers:true   ,    
+ScrollTrigger.create({   
     trigger: ".about-me-content-left ",
     animation: t2,
     toggleActions:"restart reverse restart reverse",
