@@ -35,7 +35,7 @@
             flex: 1.2;
         }
         @include breakpoint-down(small){
-            flex: 1;
+            flex: 3;
         }
         &::after{
             content: "";
