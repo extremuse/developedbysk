@@ -125,6 +125,7 @@ t4.from(".card-3" ,{opacity:0,x:-550,stagger:{from:"start",amount:0.7}})
 
 ScrollTrigger.create({
     trigger: ".card-1",
+    markers:true,
     animation: t4,
     start: "top: 70%",
     ease:"sine",
@@ -196,7 +197,6 @@ ScrollTrigger.create({
     animation: t8,
     start: "top: 90%",
     ease:"sine",
-    toggleActions:"restart reverse restart reverse",
+    toggleActions:"restart reverse ",
     end:"bottom 0%",
-    markers:true
 });
