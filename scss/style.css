@@ -112,6 +112,11 @@ a, :visited, :hover {
     flex: 1.2;
   }
 }
+@media (max-width: 39.9375rem) {
+  .navbar .logo {
+    flex: 1;
+  }
+}
 .navbar .logo::after {
   content: "";
   background-color: #00f4ff;
@@ -132,7 +137,6 @@ a, :visited, :hover {
   animation-name: logo_sachin;
   animation-duration: 1s;
   position: relative;
-  right: 0;
   overflow: hidden;
 }
 @media (max-width: 98rem) {

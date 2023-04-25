@@ -34,6 +34,9 @@
         @include breakpoint-down(medium){
             flex: 1.2;
         }
+        @include breakpoint-down(small){
+            flex: 1;
+        }
         &::after{
             content: "";
             background-color: $globalColor;
@@ -58,12 +61,12 @@
             animation-name: logo_sachin;
             animation-duration:1s;
             position: relative;
-            right: 0;
             overflow: hidden;
             @include breakpoint-down(xlarge){
                 line-height: 1;
             }
-
+                
+            
             @keyframes logo_slash {
                 0%{
                 left:0rem;
