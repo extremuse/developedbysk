@@ -53,9 +53,8 @@
                     <div class="introduce-name left">I’M <span class="span-sachinKumar">SACHIN KUMAR,</span>
                     </div>
                     <div class="works-define left"><ul>
-                        <!-- <li>ui designer</li>
-                        <li>website designer</li> -->
-                        <li>frontend developer left</li>
+                          <!-- Element to contain animated typing -->
+                             <span id="element"></span>
                     </ul></div>
                     <div class="my-thought left">&lt;let’s convert your imagination into code/&gt;</div>
                     <div class="contact-me-button left"><button class="contact"><a href="#get-in-touch">&lt;CONTACT ME/&gt;</a></button></div>
@@ -207,5 +206,15 @@
 <!----------------Javascript_files------------->
 <script src="/JS/script.js"></script>
 <script src="/JS/animation.js"></script>
+<!---------------typed js cdn link------------->
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+      <script>
+    var typed = new Typed('#element', {
+      strings: ['Web designer', 'Frontend developer','UI designer'],
+      typeSpeed: 50,
+    });
+  </script>
+    
+
 </body>
 </html>
