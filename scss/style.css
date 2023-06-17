@@ -2376,3 +2376,12 @@ a, :visited, :hover {
 #get-in-touch .get-in-touch-inner .get-in-touch-text:hover {
   background-size: 100% 100%;
 }/*# sourceMappingURL=style.css.map */
+
+/*------------animation in works define------------*/
+
+.element-changes{
+  color:white;
+  font-size:1.5rem;
+  font-weight:600;
+}
+  
