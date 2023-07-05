@@ -199,29 +199,20 @@
 
     </div>
 </div>
-      <section id="contact">
-        <div class="contact-wrapper">
-          <div class="contact-left"></div>
-          <div class="contact-right">
-            <h1 class="contact-heading">Contact</h1>
-            <form>
-              <div class="input-group">
-                <input type="text" class="field" />
-                <label class="input-label">Full Name</label>
-              </div>
-              <div class="input-group">
-                <input type="email" class="field" />
-                <label class="input-label">Email</label>
-              </div>
-              <div class="input-group">
-                <textarea class="field"></textarea>
-                <label class="message">Message</label>
-              </div>
-              <input type="submit" class="submit-btn" value="Submit" />
-            </form>
-          </div>
-        </div>
-      </section>
+      <div class="formcarry-container">
+      <form action="#" method="POST" class="formcarry-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="fullName" required />
+
+        <label for="email">Your Email Address</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Your Message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
 <!-------------------gsap cdn link------------->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
