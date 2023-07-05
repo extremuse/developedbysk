@@ -1,53 +1,54 @@
 <?php
-if (isset($_POST['email'])) {
+if (isset($_POST['Email'])) {
 
-    // REPLACE THIS 2 LINES AS YOU DESIRE
-    $email_to = "you@awesomecompany.com";
-    $email_subject = "You've got a new submission";
+    // EDIT THE 2 LINES BELOW AS REQUIRED
+    $email_to = "you@yourdomain.com";
+    $email_subject = "New form submissions";
 
     function problem($error)
     {
-        echo "Oh looks like there is some problem with your form data: <br><br>";
+        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
+        echo "These errors appear below.<br><br>";
         echo $error . "<br><br>";
-        echo "Please fix those to proceed.<br><br>";
+        echo "Please go back and fix these errors.<br><br>";
         die();
     }
 
     // validation expected data exists
     if (
-        !isset($_POST['fullName']) ||
-        !isset($_POST['email']) ||
-        !isset($_POST['message'])
+        !isset($_POST['Name']) ||
+        !isset($_POST['Email']) ||
+        !isset($_POST['Message'])
     ) {
-        problem('Oh looks like there is some problem with your form data.');
+        problem('We are sorry, but there appears to be a problem with the form you submitted.');
     }
 
-    $name = $_POST['fullName']; // required
-    $email = $_POST['email']; // required
-    $message = $_POST['message']; // required
+    $name = $_POST['Name']; // required
+    $email = $_POST['Email']; // required
+    $message = $_POST['Message']; // required
 
     $error_message = "";
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
 
     if (!preg_match($email_exp, $email)) {
-        $error_message .= 'Email address does not seem valid.<br>';
+        $error_message .= 'The Email address you entered does not appear to be valid.<br>';
     }
 
     $string_exp = "/^[A-Za-z .'-]+$/";
 
     if (!preg_match($string_exp, $name)) {
-        $error_message .= 'Name does not seem valid.<br>';
+        $error_message .= 'The Name you entered does not appear to be valid.<br>';
     }
 
     if (strlen($message) < 2) {
-        $error_message .= 'Message should not be less than 2 characters<br>';
+        $error_message .= 'The Message you entered do not appear to be valid.<br>';
     }
 
     if (strlen($error_message) > 0) {
         problem($error_message);
     }
 
-    $email_message = "Form details following:\n\n";
+    $email_message = "Form details below.\n\n";
 
     function clean_string($string)
     {
@@ -66,9 +67,9 @@ if (isset($_POST['email'])) {
     @mail($email_to, $email_subject, $email_message, $headers);
 ?>
 
-    <!-- Replace this as your success message -->
+    <!-- include your success message below -->
 
-    Thanks for contacting us, we will get back to you as soon as possible.
+    Thank you for contacting us. We will be in touch with you very soon.
 
 <?php
 }
