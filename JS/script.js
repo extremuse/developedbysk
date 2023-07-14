@@ -33,23 +33,29 @@ menu_anchor.forEach((menu_anchor) =>{
 
 //end of nav bar 
 
+//form tag animation
 
-//home animation
-
-// const boxes = document.querySelectorAll('.boxes');
-
-// window.addEventListener('scroll' ,checkboxes);
-// checkboxes();
-// function checkboxes(){
-// const trigger = window.innerHeight/ 100*2;
-// console.log(window.innerHeight);
-// boxes.forEach((box) =>{
-//     const boxtop = box.getBoundingClientRect().top;
-//     if (boxtop < trigger){
-//         box.classList.add('show');
-//     }
-//     else{
-//         box.classList.remove('show');
-//     }
-// })
-// }
+function sendMail() {
+    var params = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+    };
+  
+    const serviceID = "service_0xs9n6m";
+    const templateID = "template_vhei6ni";
+  
+      emailjs.send(serviceID, templateID, params)
+      .then(res=>{
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("message").value = "";
+          console.log(res);
+          alert("Your message sent successfully!!")
+  
+      })
+      .catch(err=>console.log(err));
+  
+  }
+  
+  
