@@ -2400,11 +2400,12 @@ a, :visited, :hover {
   align-items:center;
   border-radius: 20px;
   display: flex;
-  width: 51rem;
+  width: 71rem;
   height: 41rem;
   margin: auto;
   background: rgba(139, 134, 134, 0.1);
   backdrop-filter:blur(30px);
+  padding: 7%;
 }
 @media only screen  and (max-width:600px){
   .row{
@@ -2423,9 +2424,13 @@ a, :visited, :hover {
 
   }
 }
+.text-white{
+  flex: 1;
+}
 .contact2{
   height: inherit;
   display: flex;
+  flex: 1;
   justify-content: center;
   flex-direction: column;
 }
@@ -2485,7 +2490,7 @@ form-control:focus {
   border-radius:10px
 }
 .btn{
-  width: 45%;
+  width: 40%;
   padding: 8px 5%;
   margin: 8px 0;
   box-sizing: border-box;
